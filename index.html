@@ -199,7 +199,7 @@ FB.getLoginStatus(function(response) {
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 200)
+        .attr("y", 220)
         .text("-----------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
@@ -255,12 +255,12 @@ FB.getLoginStatus(function(response) {
 
         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
-      // canvas.append("text")
-      //   .attr("x", 50)
-      //   .attr("y", 600)
-      //   .text("-----------------------------------------------")
-      //   .style("font", "20px 'stellar'")
-      //   .style("fill", "black");
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 630)
+        .text("-----------------------------------------------")
+        .style("font", "20px 'stellar'")
+        .style("fill", "black");
 
       });
 
