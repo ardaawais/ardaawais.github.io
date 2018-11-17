@@ -78,7 +78,7 @@ FB.getLoginStatus(function(response) {
 		document.getElementById('status');
     newPage();
     document.getElementById('login').style.visibility = 'hidden';
-    d3.selectAll('p').style.visibility = 'hidden';}
+    document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
@@ -107,7 +107,7 @@ FB.getLoginStatus(function(response) {
 		document.getElementById('status');
     newPage();
     document.getElementById('login').style.visibility = 'hidden';
-    d3.selectAll('p').style.visibility = 'hidden';}
+    document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
@@ -163,7 +163,7 @@ FB.getLoginStatus(function(response) {
     }
 
 </script>
-<p> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
+<p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
 <button onclick="getName()">Get Name</button>
 <button onclick="getId()">Get ID</button>
