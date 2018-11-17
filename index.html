@@ -105,9 +105,11 @@ FB.getLoginStatus(function(response) {
     document.getElementById('login').style.visibility = 'hidden';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
-			document.getElementById('status').innerHTML = 'we are not logged in'}
+			document.getElementById('status').innerHTML = 'we are not logged in';
+      document.getElementById('logout').style.visibility = 'hidden';}
 			else {
-				document.getElementById('status').innerHTML = ' You are not logged into facebook';}
+				document.getElementById('status').innerHTML = ' You are not logged into facebook';
+        document.getElementById('logout').style.visibility = 'hidden'}
 			
 		})
 	//}
@@ -134,9 +136,11 @@ FB.getLoginStatus(function(response) {
     document.getElementById('login').style.visibility = 'hidden';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
-			document.getElementById('status').innerHTML = 'we are not logged in'}
+			document.getElementById('status').innerHTML = 'we are not logged in';
+      document.getElementById('logout').style.visibility = 'hidden';}
 			else {
-				document.getElementById('status').innerHTML = ' You are not logged into facebook';}
+				document.getElementById('status').innerHTML = ' You are not logged into facebook';
+        document.getElementById('logout').style.visibility = 'hidden';}
 
   	});
   }
