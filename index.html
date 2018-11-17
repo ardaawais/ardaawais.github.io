@@ -33,7 +33,15 @@
       .attr("width", width)
       .attr("height", height);
 
-      banner(); 
+          var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 20)
+        .attr("width", width)
+        .attr("height", 100)
+        .style("fill", black);
+
+
+
 
 
 //initlise and setup facebook js sdk
