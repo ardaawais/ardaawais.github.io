@@ -184,14 +184,14 @@ FB.getLoginStatus(function(response) {
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 200)
+        .attr("y", 150)
         .text("YOUR PROFILE")
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 230)
+        .attr("y", 180)
         .text("-----------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
@@ -261,8 +261,6 @@ FB.getLoginStatus(function(response) {
 </script>
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
-<button onclick="getName()">Get Name</button>
-<button onclick="getId()">Get ID</button>
 <button class = "button" id="login" onclick = "login()">Login to Facebook</button>
 </body>
 </html> 
