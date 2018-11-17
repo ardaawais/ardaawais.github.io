@@ -32,7 +32,7 @@
       left:50px;
     }
 
-        .button2 {
+/*        .button2 {
       background-color: #3b5998;
       border: none;
       color: white;
@@ -47,7 +47,7 @@
       border-radius: 2px;
       top:160px;
       left:1050px;
-    }
+    }*/
 
     .img{
       position:absolute;
@@ -106,10 +106,12 @@ FB.getLoginStatus(function(response) {
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
-      document.getElementById('logout').style.visibility = 'hidden';}
+      //document.getElementById('logout').style.visibility = 'hidden';
+    }
 			else {
 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-        document.getElementById('logout').style.visibility = 'hidden'}
+        //document.getElementById('logout').style.visibility = 'hidden'
+      }
 			
 		})
 	//}
@@ -137,19 +139,22 @@ FB.getLoginStatus(function(response) {
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
-      document.getElementById('logout').style.visibility = 'hidden';}
+      //document.getElementById('logout').style.visibility = 'hidden';
+    }
 			else {
 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-        document.getElementById('logout').style.visibility = 'hidden';}
+        //document.getElementById('logout').style.visibility = 'hidden';
+      }
 
   	});
   }
 
-  function logout(){
-    FB.logout(function(response) {
-  // user is now logged out
-    });
-  }
+  // //logout function
+  // function logout(){
+  //   FB.logout(function(response) {
+  // // user is now logged out
+  //   });
+  // }
 
   // // getting user name
   //   function getName() {
@@ -343,11 +348,11 @@ FB.getLoginStatus(function(response) {
 
 
     }
+//<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
 </script>
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
 <button class = "button" id="login" onclick = "login()">Login to Facebook</button>
-<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 </body>
 </html> 
