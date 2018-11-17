@@ -32,6 +32,23 @@
       left:50px;
     }
 
+        .button2 {
+      background-color: #3b5998;
+      border: none;
+      color: white;
+      padding: 10px 100px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position:absolute;
+      border-radius: 2px;
+      top:250px;
+      left:900px;
+    }
+
     .img{
       position:absolute;
       top:600px;
@@ -70,6 +87,8 @@
 
 
 banner();
+
+document.getElementById('logout').style.visibility = 'hidden';
 
 //initlise and setup facebook js sdk
   window.fbAsyncInit = function() {
@@ -124,20 +143,26 @@ FB.getLoginStatus(function(response) {
   	});
   }
 
-  // getting user name
-    function getName() {
-      FB.api('/me', 'GET', {fields: 'first_name,last_name,name, picture'}, function(response) {
-        document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>"; // change id to get first name etc. 
-        console.log(response)
-      });
-    }
+  function logout(){
+    FB.logout(function(response) {
+  // user is now logged out
+    });
+  }
 
-      // getting user id
-    function getId() {
-      FB.api('/me', 'GET', {fields: 'id'}, function(response) {
-        document.getElementById('status').innerHTML = response.id; // change id to get first name etc. 
-      });
-    }
+  // // getting user name
+  //   function getName() {
+  //     FB.api('/me', 'GET', {fields: 'first_name,last_name,name, picture'}, function(response) {
+  //       document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>"; // change id to get first name etc. 
+  //       console.log(response)
+  //     });
+  //   }
+
+  //     // getting user id
+  //   function getId() {
+  //     FB.api('/me', 'GET', {fields: 'id'}, function(response) {
+  //       document.getElementById('status').innerHTML = response.id; // change id to get first name etc. 
+  //     });
+  //   }
 
 
     //banner 
@@ -173,6 +198,8 @@ FB.getLoginStatus(function(response) {
     }
 
     function theProfile(){
+
+      document.getElementById('login').style.visibility = 'visible';
 
       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
 
@@ -321,5 +348,6 @@ FB.getLoginStatus(function(response) {
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
 <button class = "button" id="login" onclick = "login()">Login to Facebook</button>
+<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 </body>
 </html> 
