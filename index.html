@@ -101,7 +101,8 @@ FB.getLoginStatus(function(response) {
   function login(){
   	FB.login(function (response) {
   			if(response.status === 'connected'){
-		newPage();}
+		document.getElementById('status');
+    newPage();}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
