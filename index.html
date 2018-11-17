@@ -28,7 +28,7 @@
       cursor: pointer;
       position:absolute;
       border-radius: 2px;
-      top:250px;
+      top:200px;
       left:50px;
     }
 
@@ -87,8 +87,6 @@
 
 
 banner();
-
-document.getElementById('logout').style.visibility = 'hidden';
 
 //initlise and setup facebook js sdk
   window.fbAsyncInit = function() {
@@ -198,8 +196,6 @@ FB.getLoginStatus(function(response) {
     }
 
     function theProfile(){
-
-      document.getElementById('login').style.visibility = 'visible';
 
       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
 
