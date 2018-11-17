@@ -101,7 +101,7 @@ FB.getLoginStatus(function(response) {
   function login(){
   	FB.login(function (response) {
   			if(response.status === 'connected'){
-		document.getElementById('status').innerHTML = 'we are connected';}
+		newPage();}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
@@ -144,6 +144,16 @@ FB.getLoginStatus(function(response) {
         .style("fill", "white");
 
 
+    }
+
+    function newPage(){
+
+      var rect = canvas,append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", white);
     }
 
 </script>
