@@ -15,6 +15,19 @@
         bottom: 0px;
       }
 
+      .button {
+    background-color: #3b5998;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
@@ -124,6 +137,6 @@ FB.getLoginStatus(function(response) {
 <div id = "status"></div>
 <button onclick="getName()">Get Name</button>
 <button onclick="getId()">Get ID</button>
-<button onclick = "login()">Login</button>
+<button class = "button" onclick = "login()">Login</button>
 </body>
 </html> 
