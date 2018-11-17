@@ -174,7 +174,7 @@ FB.getLoginStatus(function(response) {
 
     function theProfile(){
 
-      FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location'}, function(response) {
+      FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(60).height(60)'}, function(response) {
 
       var rect = canvas.append("rect")
         .attr("x", 0)
