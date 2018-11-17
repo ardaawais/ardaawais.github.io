@@ -213,7 +213,7 @@ FB.getLoginStatus(function(response) {
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 320)
-        .text("DATE OF BIRTH:")
+        .text("DATE OF BIRTH:" + " " + response.birthday)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
@@ -227,14 +227,14 @@ FB.getLoginStatus(function(response) {
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 380)
-        .text("HOMETOWN:" + " " + response.hometown)
+        .text("HOMETOWN:" + " " + response.hometown.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 410)
-        .text("LOCATION:")
+        .text("LOCATION:" + " " + response.location.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
