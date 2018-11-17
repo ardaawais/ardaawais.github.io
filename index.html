@@ -2,10 +2,40 @@
 <html>
 <head>
 	<meta charset = "utf-8">
+    <title>Exhibition</title>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+     <style>
+      /* Make the chart container fill the page using CSS. */
+      #chart {
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+      }
+
+    </style>
 </head>
 <body>
 
 <script>
+
+      var chartDiv = document.getElementById("chart");
+      var svg = d3.select(chartDiv).append("svg");
+
+    // Define the size of the canvas above so we can re-use it later to generate co-ordinates
+    var width = chartDiv.clientWidth;
+    var height = chartDiv.clientHeight; 
+
+    // create our canvas
+    var canvas = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+      banner(); 
+
+
 //initlise and setup facebook js sdk
   window.fbAsyncInit = function() {
     FB.init({
@@ -66,6 +96,19 @@ FB.getLoginStatus(function(response) {
       FB.api('/me', 'GET', {fields: 'id'}, function(response) {
         document.getElementById('status').innerHTML = response.id; // change id to get first name etc. 
       });
+    }
+
+
+    //banner 
+    function banner(){
+
+      var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 20)
+        .attr("width", width)
+        .attr("height", 100)
+        .style("fill", black);
+
     }
 
 </script>
