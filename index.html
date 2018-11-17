@@ -75,7 +75,10 @@ banner();
 
 FB.getLoginStatus(function(response) {
 	if(response.status === 'connected'){
-		document.getElementById('status').innerHTML = 'we are connected';}
+		document.getElementById('status');
+    newPage();
+    document.getElementById('login').style.visibility = 'hidden';
+    d3.selectAll('p').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
@@ -103,7 +106,7 @@ FB.getLoginStatus(function(response) {
   			if(response.status === 'connected'){
 		document.getElementById('status');
     newPage();
-    document.getElementById('button').style.visibility = 'hidden';
+    document.getElementById('login').style.visibility = 'hidden';
     d3.selectAll('p').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
@@ -164,6 +167,6 @@ FB.getLoginStatus(function(response) {
 <div id = "status"></div>
 <button onclick="getName()">Get Name</button>
 <button onclick="getId()">Get ID</button>
-<button class = "button" onclick = "login()">Login to Facebook</button>
+<button class = "button" id="login" onclick = "login()">Login to Facebook</button>
 </body>
 </html> 
