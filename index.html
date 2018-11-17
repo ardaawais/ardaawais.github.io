@@ -102,7 +102,9 @@ FB.getLoginStatus(function(response) {
   	FB.login(function (response) {
   			if(response.status === 'connected'){
 		document.getElementById('status');
-    newPage();}
+    newPage();
+    document.getElementById('login').style.visibility = 'hidden';
+    d3.selectAll('p').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in'}
 			else {
@@ -154,7 +156,7 @@ FB.getLoginStatus(function(response) {
         .attr("y", 0)
         .attr("width", width)
         .attr("height", height)
-        .style("fill", white);
+        .style("fill", "white");
     }
 
 </script>
