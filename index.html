@@ -162,6 +162,96 @@ FB.getLoginStatus(function(response) {
         .style("fill", "white");
     }
 
+    function theProfile(){
+
+      var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 20)
+        .attr("width", width)
+        .attr("height", 100)
+        .style("fill", "black");
+
+      var text = canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 95)
+        .text("IDENTITY 2.0")
+        .style("font", "75px 'stellar'")
+        .style("fill", "white");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 200)
+        .text("YOUR PROFILE")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 245)
+        .text("-----------------------------------------------")
+        .style("font", "20px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 260)
+        .text("NAME:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 290)
+        .text("USER ID:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 320)
+        .text("DATE OF BIRTH:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 350)
+        .text("GENDER:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 380)
+        .text("HOMETOWN:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 410)
+        .text("LOCATION")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 440)
+        .text("PROFILE PICTURE:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 455)
+        .text("-----------------------------------------------")
+        .style("font", "20px 'stellar'")
+        .style("fill", "black");
+
+
+
+    }
+
 </script>
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
