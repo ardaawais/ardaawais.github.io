@@ -205,49 +205,49 @@ FB.getLoginStatus(function(response) {
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 290)
+        .attr("y", 290 +20)
         .text("USER ID:" + " " + response.id)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 320)
+        .attr("y", 320 +20)
         .text("DATE OF BIRTH:" + " " + response.birthday)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 350)
+        .attr("y", 350+20)
         .text("GENDER:" + " " + response.gender)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 380)
+        .attr("y", 380+20)
         .text("HOMETOWN:" + " " + response.hometown.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 410)
+        .attr("y", 410+20)
         .text("LOCATION:" + " " + response.location.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 440)
+        .attr("y", 440+20)
         .text("PROFILE PICTURE:")
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 470)
+        .attr("y", 470+20)
         .text("-----------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
