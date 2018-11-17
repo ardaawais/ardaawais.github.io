@@ -166,6 +166,8 @@ FB.getLoginStatus(function(response) {
 
     function theProfile(){
 
+      FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id'}, function(response) {
+
       var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 20)
@@ -197,14 +199,14 @@ FB.getLoginStatus(function(response) {
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 260)
-        .text("NAME:")
+        .text("NAME:" + response.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 290)
-        .text("USER ID:")
+        .text("USER ID:" + response.id)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
@@ -249,6 +251,8 @@ FB.getLoginStatus(function(response) {
         .text("-----------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
+
+      });
 
 
 
