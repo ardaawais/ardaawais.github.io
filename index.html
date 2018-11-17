@@ -15,32 +15,40 @@
         bottom: 0px;
       }
 
-      .button {
-    background-color: #3b5998;
-    border: none;
-    color: white;
-    padding: 10px 100px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    position:absolute;
-    border-radius: 2px;
-    top:250px;
-    left:50px;
-}
+    .button {
+      background-color: #3b5998;
+      border: none;
+      color: white;
+      padding: 10px 100px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position:absolute;
+      border-radius: 2px;
+      top:250px;
+      left:50px;
+    }
 
-p {
-    
-    margin-top: 1em;
-    margin-bottom: 1em;
-    position:absolute;
-    top:150px;
-    left:50px
+    .img{
+      position:absolute;
+      top:600px;
+      left:50px;
+    }
 
-}
+
+
+    p {
+        
+      margin-top: 1em;
+      margin-bottom: 1em;
+      position:absolute;
+      top:150px;
+      left:50px
+
+    }
 
     </style>
 </head>
@@ -245,12 +253,14 @@ FB.getLoginStatus(function(response) {
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 600)
-        .text("-----------------------------------------------")
-        .style("font", "20px 'stellar'")
-        .style("fill", "black");
+        document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
+
+      // canvas.append("text")
+      //   .attr("x", 50)
+      //   .attr("y", 600)
+      //   .text("-----------------------------------------------")
+      //   .style("font", "20px 'stellar'")
+      //   .style("fill", "black");
 
       });
 
