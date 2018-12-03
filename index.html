@@ -343,11 +343,32 @@ FB.getLoginStatus(function(response) {
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-      });
+    	button1.on('click', function(d, i) {
+  		console.log("You clicked", d), i;
+		pageLikes();
+
+	});
+
+
+      });//end of api function 
 
 
 
-    }
+    }//end of profile function
+
+
+
+function pageLikes(){
+
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", "white");
+
+
+}
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
 </script>
