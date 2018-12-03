@@ -307,8 +307,8 @@ FB.getLoginStatus(function(response) {
         .attr('width', 180)
         .attr('height', 90)
         .attr("xlink:href", "button.png")
-        .on('click', function() {
-  			console.log("You clicked")
+        .on('click', function(d, i) {
+  			console.log("You clicked",d), i;
 			pageLikes();
 		});
 
