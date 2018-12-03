@@ -306,9 +306,9 @@ FB.getLoginStatus(function(response) {
         .attr('y', 830)
         .attr('width', 180)
         .attr('height', 90)
-        .attr("xlink:href", "button.png")
-        .on('mouseover', function(){
-        	pageLikes()});
+        .attr("xlink:href", "button.png");
+        // .on('mouseover', function(){
+        // 	pageLikes()});
 
             canvas.append("text")
               .attr("x", 90)
@@ -345,10 +345,10 @@ FB.getLoginStatus(function(response) {
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-  //   	button1.on('click', function() {
-  // 		console.log("You clicked")
-		// pageLikes();
-		// });
+    	svg.on('click', function() {
+  		console.log("You clicked")
+		pageLikes();
+		});
 
       });//end of api function 
 
