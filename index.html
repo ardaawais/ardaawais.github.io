@@ -307,7 +307,7 @@ FB.getLoginStatus(function(response) {
         .attr('width', 180)
         .attr('height', 90)
         .attr("xlink:href", "button.png")
-       // .on('click', pageLikes());
+        .on('click', pageLikes());
 
             canvas.append("text")
               .attr("x", 90)
@@ -356,6 +356,8 @@ FB.getLoginStatus(function(response) {
 
 
 function pageLikes(){
+
+	console.log("You clicked");
 
     var rect = canvas.append("rect")
         .attr("x", 0)
