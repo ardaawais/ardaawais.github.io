@@ -410,17 +410,17 @@ for (var i = 0; i < info2.length; i++) {
 
 			//for loop to split the text from an array 
 			for(c = 0; c < info2.length; c++) {
-				writtenC += info2[i].length;
-				if(writtenC > wrapAt) {
+				// writtenC += info2[i].length;
+				// if(writtenC > wrapAt) {
 					yIndex++;
 					//writtenC = 0;
-				}
+				//}
 
 				var text = canvas.append("text")
 					.attr("x", 10 )// x coordinate of text
 					.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
 					.text(function (d) { return info2[i].name})
-			}
+			}// end of for (c) loop 
 
 			for(j=0; j < info2.length; j++){
 				d3.selectAll("text")
@@ -429,7 +429,7 @@ for (var i = 0; i < info2.length; i++) {
 				.delay(function(d,i){ return 700*c; }) //controls how many come on the screen
  				.duration(10) //controls how fast is changes opacity
 				.style("opacity", 1.0)
-			}
+			}// end of for (j) loop 
 
 };//end of for loop  
 
