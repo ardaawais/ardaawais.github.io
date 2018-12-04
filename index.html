@@ -345,6 +345,13 @@ function pageLikes(){
         .attr("height", 1000)
         .style("fill", "white");
 
+    function generateCoords() {
+		var x = Math.floor(Math.random() * (width-50)) + 1;
+		var y = Math.floor(Math.random() * (height-50)) + 1;
+		return [x, y];
+	}
+
+
      FB.api('/me', 'GET', {fields: 'likes'}, 
      	
      	function(response) {
@@ -354,15 +361,7 @@ var info2 = info.data;
      		console.log(info2);
      		console.log(info2.name);
 
-var info3 = function (d) { return info2.name};
-console.log(info3); 
-
-
-    	function generateCoords() {
-			var x = Math.floor(Math.random() * (width-50)) + 1;
-			var y = Math.floor(Math.random() * (height-50)) + 1;
-			return [x, y];
-		}
+     		return info2.name; 
 
 		// // Some specs for the circles
 		// var elem = canvas
