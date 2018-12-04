@@ -348,10 +348,11 @@ function pageLikes(){
      FB.api('/me', 'GET', {fields: 'likes'}, 
      	
      	function(response) {
-var info = response.likes;  
+var info = response.likes; 
+var info2 = info.data;  
      		console.log(response.likes);
-     		console.log(info.data);
-     		console.log(info.data.name);
+     		console.log(info2);
+     		console.log(info2.name);
 
 
     	function generateCoords() {
