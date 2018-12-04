@@ -361,8 +361,18 @@ var info2 = info.data;
      		console.log(info2);
      		console.log(info2.name);
 
+var yIndex = 1; 
+
 for (var i = 0; i < info2.length; i++) {
-	console.log(info2[i].name)
+	console.log(info2[i].name);
+	yIndex++; 
+
+	var text = canvas.append("text")
+		.attr("x", 10 )// x coordinate of text
+		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
+		.text(info2[i].name); 
+
+
 		// Some specs for the circles
 		// var elem = canvas
 		// 	.selectAll("g title")
@@ -403,33 +413,15 @@ for (var i = 0; i < info2.length; i++) {
 			// 	.attr("fill", "black");
 			// }// end of circle transistion for loop 
 
-		var wrapAt = width;
-		var writtenC = width;
-		var yIndex = 1;
-		var xIndex = 1; 
 
-			//for loop to split the text from an array 
-			for(c = 0; c < info2.length; c++) {
-				// writtenC += info2[i].length;
-				// if(writtenC > wrapAt) {
-					yIndex++;
-					//writtenC = 0;
-				//}
-
-				var text = canvas.append("text")
-					.attr("x", 10 )// x coordinate of text
-					.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
-					.text(function (d) { return info2[i].name})
-			}// end of for (c) loop 
-
-			for(j=0; j < info2.length; j++){
-				d3.selectAll("text")
-				.style("opacity", 0)
-				.transition()
-				.delay(function(d,i){ return 700*c; }) //controls how many come on the screen
- 				.duration(10) //controls how fast is changes opacity
-				.style("opacity", 1.0)
-			}// end of for (j) loop 
+			// for(j=0; j < info2.length; j++){
+			// 	d3.selectAll("text")
+			// 	.style("opacity", 0)
+			// 	.transition()
+			// 	.delay(function(d,i){ return 700*c; }) //controls how many come on the screen
+ 		// 		.duration(10) //controls how fast is changes opacity
+			// 	.style("opacity", 1.0)
+			// }// end of for (j) loop 
 
 };//end of for loop  
 
