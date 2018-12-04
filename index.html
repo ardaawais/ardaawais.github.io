@@ -379,8 +379,8 @@ for (var i = 0; i < info2.length; i++) {
 		// 	var r =50 //setting radius of circle 
 
 			//transistion variable 
-			var t = d3.transition()
-    			.duration(750)
+			// var t = d3.transition()
+   //  			.duration(750)
 
 			// // Create and add a circle
 			// var circle = container.append("circle")
@@ -420,17 +420,14 @@ for (var i = 0; i < info2.length; i++) {
 					.attr("x", 10 )// x coordinate of text
 					.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
 					.text(function (d) { return info2[i].name})
-
-
-
 			}
 
 			for(j=0; j < info2.length; j++){
 				d3.selectAll("text")
 				.style("opacity", 0)
 				.transition()
-				.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
- 				.duration(100) //controls how fast is changes opacity
+				.delay(function(d,i){ return 700*c; }) //controls how many come on the screen
+ 				.duration(10) //controls how fast is changes opacity
 				.style("opacity", 1.0)
 			}
 
