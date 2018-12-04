@@ -389,6 +389,20 @@ for (var i = 0; i < info2.length; i++) {
 			var fontSize = 12; 
 			var side   = 2 * r * Math.cos(Math.PI / 4);
 
+
+			
+			//for loop for circle transisitions 
+			for(c=0; c < circle.length; c++){
+				d3.selectAll("circle")
+				.style("opacity", 0)
+				.transition()
+				.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
+ 				.duration(100) //controls how fast is changes opacity
+				.style("opacity", 1.0)
+				.attr("stroke", "grey")
+				.attr("fill", "black");
+			}// end of circle transistion for loop 
+
 };//end of for loop  
 
 
