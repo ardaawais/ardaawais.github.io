@@ -364,44 +364,75 @@ var info2 = info.data;
 for (var i = 0; i < info2.length; i++) {
 	console.log(info2[i].name)
 		// Some specs for the circles
-		var elem = canvas
-			.selectAll("g title")
-			.data(info2.data); // using the datapoints 
+		// var elem = canvas
+		// 	.selectAll("g title")
+		// 	.data(info2.data); // using the datapoints 
 
 
-			// Create a container for each circle
-			var container = elem.enter()
-				.append("g")
-				.attr("transform", function (d) {
-					return "translate(" + generateCoords()[0] + "," + generateCoords()[1] + ")";
-				})
+		// 	// Create a container for each circle
+		// 	var container = elem.enter()
+		// 		.append("g")
+		// 		.attr("transform", function (d) {
+		// 			return "translate(" + generateCoords()[0] + "," + generateCoords()[1] + ")";
+		// 		})
 			
-			var r =50 //setting radius of circle 
+		// 	var r =50 //setting radius of circle 
 
 			//transistion variable 
 			var t = d3.transition()
     			.duration(750)
 
-			// Create and add a circle
-			var circle = container.append("circle")
-				.attr("r", function (d) { return r }); // specify the radius of the circle
-			var wrapWidth = r*2;
-			var fontSize = 12; 
-			var side   = 2 * r * Math.cos(Math.PI / 4);
+			// // Create and add a circle
+			// var circle = container.append("circle")
+			// 	.attr("r", function (d) { return r }); // specify the radius of the circle
+			// var wrapWidth = r*2;
+			// var fontSize = 12; 
+			// var side   = 2 * r * Math.cos(Math.PI / 4);
 
 
 			
-			//for loop for circle transisitions 
-			for(c=0; c < circle.length; c++){
-				d3.selectAll("circle")
+			// //for loop for circle transisitions 
+			// for(c=0; c < circle.length; c++){
+			// 	d3.selectAll("circle")
+			// 	.style("opacity", 0)
+			// 	.transition()
+			// 	.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
+ 		// 		.duration(100) //controls how fast is changes opacity
+			// 	.style("opacity", 1.0)
+			// 	.attr("stroke", "grey")
+			// 	.attr("fill", "black");
+			// }// end of circle transistion for loop 
+
+		var wrapAt = width;
+		var writtenC = width;
+		var yIndex = 1;
+		var xIndex = 1; 
+
+			//for loop to split the text from an array 
+			for(c = 0; c < info2.length; c++) {
+				writtenC += info2[i].length;
+				if(writtenC > wrapAt) {
+					yIndex++;
+					//writtenC = 0;
+				}
+
+				var text = canvas.append("text")
+					.attr("x", 10 )// x coordinate of text
+					.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
+					.text(function (d) { return info2[i].name})
+
+
+
+			}
+
+			for(j=0; j < info2.length; j++){
+				d3.selectAll("text")
 				.style("opacity", 0)
 				.transition()
 				.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
  				.duration(100) //controls how fast is changes opacity
 				.style("opacity", 1.0)
-				.attr("stroke", "grey")
-				.attr("fill", "black");
-			}// end of circle transistion for loop 
+			}
 
 };//end of for loop  
 
