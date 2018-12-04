@@ -414,14 +414,14 @@ for (var i = 0; i < info2.length; i++) {
 			// }// end of circle transistion for loop 
 
 
-			// for(j=0; j < info2.length; j++){
-			// 	d3.selectAll("text")
-			// 	.style("opacity", 0)
-			// 	.transition()
-			// 	.delay(function(d,i){ return 700*c; }) //controls how many come on the screen
- 		// 		.duration(10) //controls how fast is changes opacity
-			// 	.style("opacity", 1.0)
-			// }// end of for (j) loop 
+			for(j=0; j < info2.length; j++){
+				d3.selectAll("text")
+				.style("opacity", 0)
+				.transition()
+				.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
+ 				.duration(10) //controls how fast is changes opacity
+				.style("opacity", 1.0)
+			}// end of for (j) loop 
 
 };//end of for loop  
 
