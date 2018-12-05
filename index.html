@@ -287,7 +287,7 @@ FB.getLoginStatus(function(response) {
         // .on('mouseover', function(){
         // 	pageLikes()});
 
-            canvas.append("text")
+        var button1Text = canvas.append("text")
               .attr("x", 90)
               .attr("y", 885)
               .text("PAGE LIKES")
@@ -322,7 +322,7 @@ FB.getLoginStatus(function(response) {
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-    	svg.on('click', function() {
+    	button1Text.on('click', function() {
   		//console.log("You clicked")
 		pageLikes();
 		});
