@@ -352,7 +352,7 @@ function pageLikes(){
 	}
 
 
-     FB.api('/me', 'GET', {fields: 'likes'}, 
+     FB.api('/me', 'GET', {fields: 'likes.limit(2000)'}, 
      	
      	function(response) {
 var info = response.likes; 
