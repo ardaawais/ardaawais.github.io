@@ -278,6 +278,15 @@ FB.getLoginStatus(function(response) {
         .style("font", "20px 'stellar'")
         .style("fill", "black");
 
+
+      var rectButton = canvas.append("rect")
+      	.attr("x", 0)
+      	.attr("y", 830)
+      	.attr("width", width)
+      	.attr("height", 90)
+      	.style("fill", "black"); 
+
+
       var button1 = canvas.append("svg:image")
         .attr('x', 50)
         .attr('y', 830)
@@ -290,9 +299,9 @@ FB.getLoginStatus(function(response) {
         	canvas.append("text")
               .attr("x", 90)
               .attr("y", 885)
-              .text("PAGE LIKES")
+              .text("CONTINUE")
               .style("font", "25px 'stellar'")
-              .style("fill", "black");
+              .style("fill", "white");
 
       var button2 = canvas.append("svg:image")
         .attr('x', 260)
