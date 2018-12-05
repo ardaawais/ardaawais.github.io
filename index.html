@@ -353,14 +353,15 @@ function pageLikes(){
 	}
 
 		var text = canvas.append("text")
-			.attr("x", 20)
-			.attr("y", 120)
-			//.text("LOADING DATA FOR ARDA AWAIS")
-			.style("font", "50px 'stellar'")
+			.attr("x",20)
+			.attr("y", 100)
+			.text("FETCHING YOUR DATA...")
+			.style("font", "75px 'stellar'")
 			.style("fill", "black");
 
+
 		var i = 0;
-		var data = ['FETCHING YOUR DATA ...'];
+		var data = ['FETCHING YOUR DATA...'];
 
 		transition(); 
 
@@ -372,7 +373,8 @@ function pageLikes(){
 		            var newText = data[0];
 		            var textLength = newText.length;
 		            return function (t) {
-		                this.textContent = newText.slice(0, Math.round( t * textLength) );
+		                this.textContent = newText.slice(0, 
+		                                   Math.round( t * textLength) );
 		            };
 		        });
 		    
