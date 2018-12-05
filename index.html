@@ -287,12 +287,12 @@ FB.getLoginStatus(function(response) {
       	.style("fill", "black"); 
 
 
-      var button1 = canvas.append("svg:image")
-        .attr('x', 50)
-        .attr('y', 830)
-        .attr('width', 180)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
+      // var button1 = canvas.append("svg:image")
+      //   .attr('x', 50)
+      //   .attr('y', 830)
+      //   .attr('width', 180)
+      //   .attr('height', 90)
+      //   .attr("xlink:href", "button.png");
         // .on('mouseover', function(){
         // 	pageLikes()});
 
@@ -303,35 +303,35 @@ FB.getLoginStatus(function(response) {
               .style("font", "25px 'stellar'")
               .style("fill", "white");
 
-      var button2 = canvas.append("svg:image")
-        .attr('x', 260)
-        .attr('y', 830)
-        .attr('width', 180)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
+      // var button2 = canvas.append("svg:image")
+      //   .attr('x', 260)
+      //   .attr('y', 830)
+      //   .attr('width', 180)
+      //   .attr('height', 90)
+      //   .attr("xlink:href", "button.png");
 
-            canvas.append("text")
-              .attr("x", 290)
-              .attr("y", 885)
-              .text("ADVERTISERS")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black");
+      //       canvas.append("text")
+      //         .attr("x", 290)
+      //         .attr("y", 885)
+      //         .text("ADVERTISERS")
+      //         .style("font", "25px 'stellar'")
+      //         .style("fill", "black");
 
-      var button3 = canvas.append("svg:image")
-        .attr('x', 460)
-        .attr('y', 830)
-        .attr('width', 180)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
+      // var button3 = canvas.append("svg:image")
+      //   .attr('x', 460)
+      //   .attr('y', 830)
+      //   .attr('width', 180)
+      //   .attr('height', 90)
+      //   .attr("xlink:href", "button.png");
 
-            canvas.append("text")
-              .attr("x", 515)
-              .attr("y", 885)
-              .text("PHOTOS")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black");
+      //       canvas.append("text")
+      //         .attr("x", 515)
+      //         .attr("y", 885)
+      //         .text("PHOTOS")
+      //         .style("font", "25px 'stellar'")
+      //         .style("fill", "black");
 
-    	rectButton.on('click', function() {
+    	rectButton.on('click', function(d,i) {
   		//console.log("You clicked")
 		//pageLikes();
 		loadingAds(); 
