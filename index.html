@@ -424,8 +424,8 @@ function loadingAds(){
 		d3.selectAll("text")
 		.style("opacity", 0)
 		.transition()
-		.delay(function(d,i){ return 100*i; }) //controls how many come on the screen
- 		.duration(200) //controls how fast is changes opacity
+		.delay(function(d,i){ return 1000*i; }) //controls how many come on the screen
+ 		.duration(800) //controls how fast is changes opacity
 		.style("opacity", 1.0)
 		.remove()
 
