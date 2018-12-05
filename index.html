@@ -419,7 +419,7 @@ var text = canvas.append("text")
 	.text(names[0]); 
 
 canvas.append("text")
-	.attr("x", 50)
+	.attr("x", 80)
 	.attr("y", 120 + (spacer + fontSize))
 	.style("font", "75px 'stellar'")
 	.text(names[1])
@@ -430,36 +430,36 @@ canvas.append("text")
 	.style("opacity", 1.0); 
 
 canvas.append("text")
-	.attr("x", 50)
+	.attr("x", 80)
 	.attr("y", 120 + (spacer + fontSize)*2)
 	.style("font", "75px 'stellar'")
 	.text(names[2])
 	.style("opacity", 0)
 	.transition()
 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(4000) //controls how fast is changes opacity
+ 	.duration(6000) //controls how fast is changes opacity
 	.style("opacity", 1.0);  
 
 canvas.append("text")
-	.attr("x", 50)
+	.attr("x", 80)
 	.attr("y", 120 + (spacer + fontSize)*3)
 	.style("font", "75px 'stellar'")
 	.text(names[3])
 	.style("opacity", 0)
 	.transition()
 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(5000) //controls how fast is changes opacity
+ 	.duration(9000) //controls how fast is changes opacity
 	.style("opacity", 1.0);  
 
 canvas.append("text")
-	.attr("x", 50)
+	.attr("x", 80)
 	.attr("y", 120 + (spacer + fontSize)*4)
 	.style("font", "75px 'stellar'")
 	.text(names[4])
 	.style("opacity", 0)
 	.transition()
 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(6000) //controls how fast is changes opacity
+ 	.duration(12000) //controls how fast is changes opacity
 	.style("opacity", 1.0); 
 
 	// for(a=0; a < names.length; a++){
