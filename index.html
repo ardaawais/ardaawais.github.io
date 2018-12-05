@@ -407,7 +407,7 @@ function loadingAds(){
         .attr("height", 1000)
         .style("fill", "white");
 
-	var names = ['ADVERTISERS', '- WHO TARGETS YOU?', '- WHO SEES YOU?', '- WHO TRACKS YOU?', '- WHAT IS YOUR WORTH?'];
+	var names = ['ADVERTISERS', '  WHO TARGETS YOU?', '  WHO SEES YOU?', '  WHO TRACKS YOU?', '  WHAT IS YOUR WORTH?'];
 
 var fontSize = 75; 
 var spacer= 20; 
@@ -422,7 +422,12 @@ canvas.append("text")
 	.attr("x", 50)
 	.attr("y", 120 + (spacer + fontSize))
 	.style("font", "75px 'stellar'")
-	.text(names[1]); 
+	.text(names[1])
+	.style("opacity", 0)
+	.transition()
+	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+ 	.duration(50) //controls how fast is changes opacity
+	.style("opacity", 1.0); 
 
 canvas.append("text")
 	.attr("x", 50)
