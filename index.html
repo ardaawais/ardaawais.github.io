@@ -393,6 +393,11 @@ for (var i = 0; i < info2.length; i++) {
 
   });//end of fb api function 
 
+        svg.on('click', function() {
+  		//console.log("You clicked")
+		adFact();
+		});
+
 
 }// end of page likes function
 
@@ -470,6 +475,34 @@ canvas.append("text")
 
 
 }// end of loadingAds function 
+
+function adFact(){
+
+			var text = canvas.append("text")
+			.attr("x",50)
+			.attr("y", 120)
+			.text("FACEBOOK MAKES $22,311")
+			.style("font", "80px 'stellar'")
+			.style("fill", "black");
+
+
+		canvas.append("text")
+			.attr("x",50)
+			.attr("y", 240)
+			.text("FROM DIGITAL AD'S")
+			.style("font", "80px 'stellar'")
+			.style("fill", "black");
+
+		canvas.append("text")
+			.attr("x",50)
+			.attr("y", 280)
+			.text("EVERY 3 MINUTES")
+			.style("font", "80px 'stellar'")
+			.style("fill", "black");
+
+
+
+}//end of adFact function 
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
