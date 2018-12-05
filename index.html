@@ -352,7 +352,7 @@ function pageLikes(){
 		return [x, y];
 	}
 
-		var text = canvas.append("text")
+		var title = canvas.append("text")
 			.attr("x",20)
 			.attr("y", 100)
 			//.text("FETCHING YOUR DATA...")
@@ -366,10 +366,10 @@ function pageLikes(){
 		transition(); 
 
 		function transition() {
-		    d3.select('text').transition()
+		    d3.select('title').transition()
 		        .duration(3000)
 		        .ease("linear")
-		        .tween("text", function () {
+		        .tween("title", function () {
 		            var newText = data[0];
 		            var textLength = newText.length;
 		            return function (t) {
