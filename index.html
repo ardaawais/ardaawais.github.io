@@ -287,7 +287,7 @@ FB.getLoginStatus(function(response) {
         // .on('mouseover', function(){
         // 	pageLikes()});
 
-        var button1Text = canvas.append("text")
+        	canvas.append("text")
               .attr("x", 90)
               .attr("y", 885)
               .text("PAGE LIKES")
@@ -322,9 +322,10 @@ FB.getLoginStatus(function(response) {
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-    	button1Text.on('click', function() {
+    	svg.on('click', function() {
   		//console.log("You clicked")
-		pageLikes();
+		//pageLikes();
+		loadingAds(); 
 		});
 
       });//end of api function 
@@ -394,6 +395,37 @@ for (var i = 0; i < info2.length; i++) {
 
 
 }// end of page likes function
+
+
+function loadingAds(){
+
+	var names = ['ADVERTISERS', 'WHO TARGETS YOU?', ' WHO SEES YOU?', 'WHO TRACKS YOU?', 'WHAT IS YOUR WORTH?'];
+	//var textWidth = text.node().getComputedTextLength();
+
+
+	for(a=0; a < names.length; a++){
+
+		var text2 = canvas.append("text")
+		.attr("x", 50)
+		.attr("y", height/2)
+		.style("font", "75px 'stellar'")
+		.text(function (d) { return names[a]});
+	};
+
+	for(n=0; n < names.length; n++){
+		d3.selectAll("text")
+		.style("opacity", 0)
+		.transition()
+		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+ 		.duration(200) //controls how fast is changes opacity
+		.style("opacity", 1.0)
+		.remove()
+
+	};
+
+
+
+}
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
