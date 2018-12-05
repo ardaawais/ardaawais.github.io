@@ -352,14 +352,15 @@ function pageLikes(){
 	}
 
 
-     FB.api('/me', 'GET', {fields: 'likes.limit(2000)'}, 
+     FB.api('/me', 'GET', {fields: 'likes'}, 
      	
      	function(response) {
 var info = response.likes; 
-var info2 = info.data;  
-     		console.log(response.likes);
-     		console.log(info2);
-     		console.log(info2.name);
+var info2 = info.data;
+			//console testing   
+     		//console.log(response.likes);
+     		//console.log(info2);
+     		//console.log(info2.name);
 
 var yIndex = 1; 
 
@@ -372,46 +373,9 @@ for (var i = 0; i < info2.length; i++) {
 		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
 		.text(info2[i].name); 
 
-
-		// Some specs for the circles
-		// var elem = canvas
-		// 	.selectAll("g title")
-		// 	.data(info2.data); // using the datapoints 
-
-
-		// 	// Create a container for each circle
-		// 	var container = elem.enter()
-		// 		.append("g")
-		// 		.attr("transform", function (d) {
-		// 			return "translate(" + generateCoords()[0] + "," + generateCoords()[1] + ")";
-		// 		})
-			
-		// 	var r =50 //setting radius of circle 
-
 			//transistion variable 
-			// var t = d3.transition()
-   //  			.duration(750)
-
-			// // Create and add a circle
-			// var circle = container.append("circle")
-			// 	.attr("r", function (d) { return r }); // specify the radius of the circle
-			// var wrapWidth = r*2;
-			// var fontSize = 12; 
-			// var side   = 2 * r * Math.cos(Math.PI / 4);
-
-
-			
-			// //for loop for circle transisitions 
-			// for(c=0; c < circle.length; c++){
-			// 	d3.selectAll("circle")
-			// 	.style("opacity", 0)
-			// 	.transition()
-			// 	.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
- 		// 		.duration(100) //controls how fast is changes opacity
-			// 	.style("opacity", 1.0)
-			// 	.attr("stroke", "grey")
-			// 	.attr("fill", "black");
-			// }// end of circle transistion for loop 
+			var t = d3.transition()
+   				.duration(10)
 
 
 			for(j=0; j < info2.length; j++){
@@ -424,9 +388,7 @@ for (var i = 0; i < info2.length; i++) {
 			}// end of for (j) loop 
 
 };//end of for loop  
-
-
-      
+     
 
   });//end of fb api function 
 
