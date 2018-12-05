@@ -417,25 +417,19 @@ function loadingAds(){
 		.attr("x", 50)
 		.attr("y", height/2)
 		.style("font", "75px 'stellar'")
-		.text(function (d) { return names[a]})
-		.style("opacity", 0)
-		.transition()
-		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-		.duration(200)
-		.style("opacity",1.0)
-		.remove(); 
+		.text(function (d) { return names[a]});
 	};
 
-	// for(n=0; n < names.length; n++){
-	// 	d3.selectAll("text")
-	// 	.style("opacity", 0)
-	// 	.transition()
-	// 	.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
- // 		.duration(200) //controls how fast is changes opacity
-	// 	.style("opacity", 1.0)
-	// 	.remove()
+	for(n=0; n < names.length; n++){
+		d3.selectAll("text")
+		.style("opacity", 0)
+		.transition()
+		.delay(function(d,i){ return 4100*i; }) //controls how many come on the screen
+ 		.duration(50) //controls how fast is changes opacity
+		.style("opacity", 1.0)
+		.remove()
 
-	// };
+	};
 
 
 
