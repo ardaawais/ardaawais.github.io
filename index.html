@@ -399,6 +399,14 @@ for (var i = 0; i < info2.length; i++) {
 
 function loadingAds(){
 
+	document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
 	var names = ['ADVERTISERS', 'WHO TARGETS YOU?', ' WHO SEES YOU?', 'WHO TRACKS YOU?', 'WHAT IS YOUR WORTH?'];
 	//var textWidth = text.node().getComputedTextLength();
 
@@ -416,7 +424,7 @@ function loadingAds(){
 		d3.selectAll("text")
 		.style("opacity", 0)
 		.transition()
-		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+		.delay(function(d,i){ return 700*i; }) //controls how many come on the screen
  		.duration(200) //controls how fast is changes opacity
 		.style("opacity", 1.0)
 		.remove()
