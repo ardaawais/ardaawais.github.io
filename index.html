@@ -352,36 +352,6 @@ function pageLikes(){
 		return [x, y];
 	}
 
-		var titleT = canvas.append("text")
-			.attr("x",20)
-			.attr("y", 100)
-			//.text("FETCHING YOUR DATA...")
-			.style("font", "75px 'stellar'")
-			.style("fill", "black");
-
-
-		var i = 0;
-		var data = ['FETCHING YOUR DATA...'];
-
-		transition(); 
-
-		function transition() {
-		    d3.select('titleT').transition()
-		        .duration(3000)
-		        .ease("linear")
-		        .tween("titleT", function () {
-		            var newText = data[0];
-		            var textLength = newText.length;
-		            return function (t) {
-		                this.textContent = newText.slice(0, 
-		                                   Math.round( t * textLength) );
-		            };
-		        });
-		    
-		    i = (i + 1) % data.length;
-
-		} 
-
 
      FB.api('/me', 'GET', {fields: 'likes'}, 
      	
@@ -401,7 +371,7 @@ for (var i = 0; i < info2.length; i++) {
 
 	var text = canvas.append("text")
 		.attr("x", 10 )// x coordinate of text
-		.attr("y", 100 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
+		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
 		.text(info2[i].name); 
 
 			//transistion variable 
