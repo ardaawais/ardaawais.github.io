@@ -408,32 +408,38 @@ function loadingAds(){
         .style("fill", "white");
 
 	var names = ['ADVERTISERS', 'WHO TARGETS YOU?', ' WHO SEES YOU?', 'WHO TRACKS YOU?', 'WHAT IS YOUR WORTH?'];
-	//var textWidth = text.node().getComputedTextLength();
+
+var fontSize = 75; 
+
+var text = canvas.append("text")
+	.attr("x", 50)
+	.attr("y", height/2)
+	.style("font", "fontSize 'stellar'")
+	.text(names[0]); 
+
+	// for(a=0; a < names.length; a++){
+
+	// 	var text2 = canvas.append("text")
+	// 	.attr("x", 50)
+	// 	.attr("y", height/2)
+	// 	.style("font", "75px 'stellar'")
+	// 	.text(function (d) { return names[a]});
+	// };
+
+	// for(n=0; n < names.length; n++){
+	// 	d3.selectAll("text")
+	// 	.style("opacity", 0)
+	// 	.transition()
+	// 	.delay(function(d,i){ return 1000*i; }) //controls how many come on the screen
+ // 		.duration(800) //controls how fast is changes opacity
+	// 	.style("opacity", 1.0)
+	// 	.remove()
+
+	// };
 
 
-	for(a=0; a < names.length; a++){
 
-		var text2 = canvas.append("text")
-		.attr("x", 50)
-		.attr("y", height/2)
-		.style("font", "75px 'stellar'")
-		.text(function (d) { return names[a]});
-	};
-
-	for(n=0; n < names.length; n++){
-		d3.selectAll("text")
-		.style("opacity", 0)
-		.transition()
-		.delay(function(d,i){ return 500*i; }) //controls how many come on the screen
- 		.duration(800) //controls how fast is changes opacity
-		.style("opacity", 1.0)
-		.remove()
-
-	};
-
-
-
-}
+}// end of loadingAds function 
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
