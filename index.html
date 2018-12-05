@@ -352,6 +352,34 @@ function pageLikes(){
 		return [x, y];
 	}
 
+		var text = canvas.append("text")
+			.attr("x", 20)
+			.attr("y", 120)
+			//.text("LOADING DATA FOR ARDA AWAIS")
+			.style("font", "50px 'stellar'")
+			.style("fill", "black");
+
+		var i = 0;
+		var data = ['FETCHING YOUR DATA ...'];
+
+		transition(); 
+
+		function transition() {
+		    d3.select('text').transition()
+		        .duration(3000)
+		        .ease("linear")
+		        .tween("text", function () {
+		            var newText = data[0];
+		            var textLength = newText.length;
+		            return function (t) {
+		                this.textContent = newText.slice(0, Math.round( t * textLength) );
+		            };
+		        });
+		    
+		    i = (i + 1) % data.length;
+
+		} 
+
 
      FB.api('/me', 'GET', {fields: 'likes.limit(2000)'}, 
      	
