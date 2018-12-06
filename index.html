@@ -479,7 +479,7 @@ canvas.append("text")
 
     	svg.on('click', function() {
   		//console.log("You clicked")
-		pageLikes();
+		statement();
 		});
 
 
@@ -517,9 +517,39 @@ function adFact(){
 			.style("font", "80px 'stellar'")
 			.style("fill", "black");
 
-
-
 }//end of adFact function 
+
+function statement(){
+
+	document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
+    	var text = canvas.append("text")
+			.attr("x",50)
+			.attr("y", 120)
+			.text("Facebook is free for it’s users because it makes money") //$7437 every minute 
+			.style("font", "40px 'stellar'")
+			.style("fill", "black");
+
+		canvas.append("text")
+			.attr("x",50)
+			.attr("y", 240)
+			.text("from digital ad’s that use your data")
+			.style("font", "40px 'stellar'")
+			.style("fill", "black");
+
+
+    	svg.on('click', function() {
+  		//console.log("You clicked")
+		pageLikes(); 
+		});
+
+}// end of statement function
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
 
