@@ -497,7 +497,7 @@ function adFact(){
    //      .style("fill", "white");
 
 			var text = canvas.append("text")
-			.attr("x",150)
+			.attr("x",3000)
 			.attr("y", 120)
 			.text("FACEBOOK MAKES $22,311") //$7437 every minute 
 			.style("font", "80px 'stellar'")
@@ -505,14 +505,14 @@ function adFact(){
 
 
 		canvas.append("text")
-			.attr("x",150)
+			.attr("x",300)
 			.attr("y", 240)
 			.text("FROM DIGITAL AD'S")
 			.style("font", "80px 'stellar'")
 			.style("fill", "black");
 
 		canvas.append("text")
-			.attr("x",150)
+			.attr("x",300)
 			.attr("y", 380)
 			.text("EVERY 3 MINUTES")
 			.style("font", "80px 'stellar'")
@@ -543,6 +543,21 @@ function statement(){
 			.text("from digital ad’s that use your data")
 			.style("font", "40px 'stellar'")
 			.style("fill", "black");
+
+
+      var button4 = canvas.append("svg:image")
+        .attr('x', 50)
+        .attr('y', 300)
+        .attr('width', 300)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png");
+
+            canvas.append("text")
+              .attr("x", 80)//+30
+              .attr("y", 355)//+55
+              .text("WHO ARE MY AD'S?")
+              .style("font", "25px 'stellar'")
+              .style("fill", "black");
 
 
     	svg.on('click', function() {
