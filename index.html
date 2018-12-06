@@ -335,6 +335,7 @@ FB.getLoginStatus(function(response) {
   		//console.log("You clicked")
 		//pageLikes();
 		loadingAds(); 
+		//statement();
 		});
 
       });//end of api function 
@@ -479,7 +480,7 @@ canvas.append("text")
 
     	svg.on('click', function() {
   		//console.log("You clicked")
-		statement();
+		pageLikes();
 		});
 
 
@@ -487,16 +488,16 @@ canvas.append("text")
 
 function adFact(){
 
-   document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
+   // document.getElementById('status').style.visibility = 'hidden';
+   //  var rect = canvas.append("rect")
+   //      .attr("x", 0)
+   //      .attr("y", 0)
+   //      .attr("width", width)
+   //      .attr("height", 1000)
+   //      .style("fill", "white");
 
 			var text = canvas.append("text")
-			.attr("x",50)
+			.attr("x",150)
 			.attr("y", 120)
 			.text("FACEBOOK MAKES $22,311") //$7437 every minute 
 			.style("font", "80px 'stellar'")
@@ -504,14 +505,14 @@ function adFact(){
 
 
 		canvas.append("text")
-			.attr("x",50)
+			.attr("x",150)
 			.attr("y", 240)
 			.text("FROM DIGITAL AD'S")
 			.style("font", "80px 'stellar'")
 			.style("fill", "black");
 
 		canvas.append("text")
-			.attr("x",50)
+			.attr("x",150)
 			.attr("y", 380)
 			.text("EVERY 3 MINUTES")
 			.style("font", "80px 'stellar'")
