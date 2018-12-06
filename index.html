@@ -426,79 +426,79 @@ for (var i = 0; i < info2.length; i++) {
 }// end of page likes function
 
 
-function loadingAds(){
+// function loadingAds(){
 
-	document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
+// 	document.getElementById('status').style.visibility = 'hidden';
+//     var rect = canvas.append("rect")
+//         .attr("x", 0)
+//         .attr("y", 0)
+//         .attr("width", width)
+//         .attr("height", 1000)
+//         .style("fill", "white");
 
-	var names = ['ADVERTISERS', '  WHO TARGETS YOU?', '  WHO SEES YOU?', '  WHO TRACKS YOU?', '  WHAT IS YOUR WORTH?'];
+// 	var names = ['ADVERTISERS', '  WHO TARGETS YOU?', '  WHO SEES YOU?', '  WHO TRACKS YOU?', '  WHAT IS YOUR WORTH?'];
 
-var fontSize = 90; 
-var spacer= 20; 
+// var fontSize = 90; 
+// var spacer= 20; 
 
-var text = canvas.append("text")
-	.attr("x", 50)
-	.attr("y", 120)
-	.style("font", "90px 'stellar'")
-	.text(names[0]); 
+// var text = canvas.append("text")
+// 	.attr("x", 50)
+// 	.attr("y", 120)
+// 	.style("font", "90px 'stellar'")
+// 	.text(names[0]); 
 
-canvas.append("text")
-	.attr("x", 80)
-	.attr("y", 120 + (spacer + fontSize))
-	.style("font", "75px 'stellar'")
-	.text(names[1])
-	.style("opacity", 0)
-	.transition()
-	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(3000) //controls how fast is changes opacity
-	.style("opacity", 1.0); 
+// canvas.append("text")
+// 	.attr("x", 80)
+// 	.attr("y", 120 + (spacer + fontSize))
+// 	.style("font", "75px 'stellar'")
+// 	.text(names[1])
+// 	.style("opacity", 0)
+// 	.transition()
+// 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+//  	.duration(3000) //controls how fast is changes opacity
+// 	.style("opacity", 1.0); 
 
-canvas.append("text")
-	.attr("x", 80)
-	.attr("y", 120 + (spacer + fontSize)*2)
-	.style("font", "75px 'stellar'")
-	.text(names[2])
-	.style("opacity", 0)
-	.transition()
-	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(9000) //controls how fast is changes opacity
-	.style("opacity", 1.0);  
+// canvas.append("text")
+// 	.attr("x", 80)
+// 	.attr("y", 120 + (spacer + fontSize)*2)
+// 	.style("font", "75px 'stellar'")
+// 	.text(names[2])
+// 	.style("opacity", 0)
+// 	.transition()
+// 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+//  	.duration(9000) //controls how fast is changes opacity
+// 	.style("opacity", 1.0);  
 
-canvas.append("text")
-	.attr("x", 80)
-	.attr("y", 120 + (spacer + fontSize)*3)
-	.style("font", "75px 'stellar'")
-	.text(names[3])
-	.style("opacity", 0)
-	.transition()
-	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(15000) //controls how fast is changes opacity
-	.style("opacity", 1.0);  
+// canvas.append("text")
+// 	.attr("x", 80)
+// 	.attr("y", 120 + (spacer + fontSize)*3)
+// 	.style("font", "75px 'stellar'")
+// 	.text(names[3])
+// 	.style("opacity", 0)
+// 	.transition()
+// 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+//  	.duration(15000) //controls how fast is changes opacity
+// 	.style("opacity", 1.0);  
 
-canvas.append("text")
-	.attr("x", 80)
-	.attr("y", 120 + (spacer + fontSize)*4)
-	.style("font", "75px 'stellar'")
-	.text(names[4])
-	.style("opacity", 0)
-	.transition()
-	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
- 	.duration(21000) //controls how fast is changes opacity
-	.style("opacity", 1.0); 
-
-
-    	svg.on('click', function() {
-  		//console.log("You clicked")
-		pageLikes();
-		});
+// canvas.append("text")
+// 	.attr("x", 80)
+// 	.attr("y", 120 + (spacer + fontSize)*4)
+// 	.style("font", "75px 'stellar'")
+// 	.text(names[4])
+// 	.style("opacity", 0)
+// 	.transition()
+// 	.delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+//  	.duration(21000) //controls how fast is changes opacity
+// 	.style("opacity", 1.0); 
 
 
-}// end of loadingAds function 
+//     	svg.on('click', function() {
+//   		//console.log("You clicked")
+// 		pageLikes();
+// 		});
+
+
+// }// end of loadingAds function 
 
 function adFact(){
 
@@ -535,9 +535,9 @@ function adFact(){
 
 		canvas.append("text")
 			.attr("x",50)
-			.attr("y", 440)
+			.attr("y", 500)
 			.text("But facebook is not the only digital platform")
-			.style("font", "30px 'stellar'")
+			.style("font", "50px 'stellar'")
 			.style("fill", "black");
 
 	// var button6 = canvas.append("svg:image")
