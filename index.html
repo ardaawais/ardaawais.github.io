@@ -487,10 +487,18 @@ canvas.append("text")
 
 function adFact(){
 
+   document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
 			var text = canvas.append("text")
 			.attr("x",50)
 			.attr("y", 120)
-			.text("FACEBOOK MAKES $22,311")
+			.text("FACEBOOK MAKES $22,311") //$7437 every minute 
 			.style("font", "80px 'stellar'")
 			.style("fill", "black");
 
