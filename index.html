@@ -264,16 +264,16 @@ FB.getLoginStatus(function(response) {
 
         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
-      // canvas.append("text")
-      //   .attr("x", 50)
-      //   .attr("y", 750)
-      //   .text("EXPLORE YOUR ONLINE IDENTITY")
-      //   .style("font", "30px 'stellar'")
-      //   .style("fill", "black");
-
       canvas.append("text")
         .attr("x", 50)
         .attr("y", 750)
+        .text("EXPLORE YOUR ONLINE IDENTITY")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 830)
         .text("--------------------------------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
@@ -296,26 +296,26 @@ FB.getLoginStatus(function(response) {
         // .on('mouseover', function(){
         // 	pageLikes()});
 
-        	canvas.append("text")
-              .attr("x", 50)
-              .attr("y", 830)
-              .text("EXPLORE ---->")
+        	// canvas.append("text")
+         //      .attr("x", 50)
+         //      .attr("y", 830)
+         //      .text("EXPLORE ---->")
+         //      .style("font", "25px 'stellar'")
+         //      .style("fill", "black");
+
+      var button2 = canvas.append("svg:image")
+        .attr('x', 260)
+        .attr('y', 830)
+        .attr('width', 180)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png");
+
+            canvas.append("text")
+              .attr("x", 290)
+              .attr("y", 885)
+              .text("ADVERTISERS")
               .style("font", "25px 'stellar'")
               .style("fill", "black");
-
-      // var button2 = canvas.append("svg:image")
-      //   .attr('x', 260)
-      //   .attr('y', 830)
-      //   .attr('width', 180)
-      //   .attr('height', 90)
-      //   .attr("xlink:href", "button.png");
-
-      //       canvas.append("text")
-      //         .attr("x", 290)
-      //         .attr("y", 885)
-      //         .text("ADVERTISERS")
-      //         .style("font", "25px 'stellar'")
-      //         .style("fill", "black");
 
       // var button3 = canvas.append("svg:image")
       //   .attr('x', 460)
