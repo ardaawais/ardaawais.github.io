@@ -408,14 +408,24 @@ for (var i = 0; i < info2.length; i++) {
         .attr('y', 20)
         .attr('width', 300)
         .attr('height', 90)
-        .attr("xlink:href", "button.png");
+        .attr("xlink:href", "button.png")
+        .style("opacity", 0)
+		.transition()
+		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+ 		.duration(100) //controls how fast is changes opacity
+		.style("opacity", 1.0); 
 
             canvas.append("text")
               .attr("x", width - 230)//+30
               .attr("y", 75)//+55
               .text("SHOW ME THE £$")
               .style("font", "25px 'stellar'")
-              .style("fill", "black");
+              .style("fill", "black")
+		      .style("opacity", 0)
+			  .transition()
+			  .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+		 	  .duration(100) //controls how fast is changes opacity
+			  .style("opacity", 1.0); 
 
         svg.on('click', function() {
   		//console.log("You clicked")
