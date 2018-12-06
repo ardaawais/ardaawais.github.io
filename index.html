@@ -659,6 +659,13 @@ function generalVis(){
 			.style("fill", "black");
 
 
+    	canvas.append("text")
+			.attr("x",30)
+			.attr("y", yP + (fontS + spaceF)*5)
+			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+			.style("font", "20px 'stellar'")
+			.style("fill", "black");
+
 }// end of GeneralVis function
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
