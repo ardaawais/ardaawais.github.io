@@ -612,6 +612,7 @@ function generalVis(){
 
 	var fontS = 40; 
 	var spaceF = 20; 
+	var yP = 50; 
 
 	document.getElementById('status').style.visibility = 'hidden';
     var rect = canvas.append("rect")
@@ -623,28 +624,28 @@ function generalVis(){
 
     	var text = canvas.append("text")
 			.attr("x",30)
-			.attr("y", 30)
+			.attr("y", yP)
 			.text("FACEBOOK: ") //$7437 every minute 
 			.style("font", "40px 'stellar'")
 			.style("fill", "black");
 
     	canvas.append("text")
 			.attr("x",30)
-			.attr("y", 30 + (fontS + spaceF))
+			.attr("y", yP + (fontS + spaceF))
 			.text("TWITTER: ") //$7437 every minute 
 			.style("font", "40px 'stellar'")
 			.style("fill", "black");
 
     	canvas.append("text")
 			.attr("x",30)
-			.attr("y", 30 + (fontS + spaceF)*2)
+			.attr("y", yP + (fontS + spaceF)*2)
 			.text("YOUTUBE: ") //$7437 every minute 
 			.style("font", "40px 'stellar'")
 			.style("fill", "black");
 
     	canvas.append("text")
 			.attr("x",30)
-			.attr("y", 30 + (fontS + spaceF)*3)
+			.attr("y", yP + (fontS + spaceF)*3)
 			.text("REDDIT: ") //$7437 every minute 
 			.style("font", "40px 'stellar'")
 			.style("fill", "black");
@@ -652,7 +653,7 @@ function generalVis(){
 
     	canvas.append("text")
 			.attr("x",30)
-			.attr("y", 30 + (fontS + spaceF)*4)
+			.attr("y", yP + (fontS + spaceF)*4)
 			.text("Just to give a few examples") //$7437 every minute 
 			.style("font", "20px 'stellar'")
 			.style("fill", "black");
