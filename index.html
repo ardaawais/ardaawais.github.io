@@ -173,138 +173,138 @@ FB.getLoginStatus(function(response) {
 
 //==============================================================
 
-//SCREEN 2 
-//==============================================================
-    function theProfile(){
+// //SCREEN 2 
+// //==============================================================
+//     function theProfile(){
 
-      var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", height)
-        .style("fill", "white");
+//       var rect = canvas.append("rect")
+//         .attr("x", 0)
+//         .attr("y", 0)
+//         .attr("width", width)
+//         .attr("height", height)
+//         .style("fill", "white");
 
-      FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
+//       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
 
-      var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 20)
-        .attr("width", width)
-        .attr("height", 100)
-        .style("fill", "black");
+//       var rect = canvas.append("rect")
+//         .attr("x", 0)
+//         .attr("y", 20)
+//         .attr("width", width)
+//         .attr("height", 100)
+//         .style("fill", "black");
 
-      var text = canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 95)
-        .text("IDENTITY 2.0")
-        .style("font", "75px 'stellar'")
-        .style("fill", "white");
+//       var text = canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 95)
+//         .text("IDENTITY 2.0")
+//         .style("font", "75px 'stellar'")
+//         .style("fill", "white");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 180)
-        .text("YOUR PROFILE")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 180)
+//         .text("YOUR PROFILE")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 220)
-        .text("--------------------------------------------------------------------")
-        .style("font", "20px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 220)
+//         .text("--------------------------------------------------------------------")
+//         .style("font", "20px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 260)
-        .text("NAME:" + " " + response.name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 260)
+//         .text("NAME:" + " " + response.name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 310)
-        .text("USER ID:" + " " + response.id)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 310)
+//         .text("USER ID:" + " " + response.id)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 360)
-        .text("DATE OF BIRTH:" + " " + response.birthday)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 360)
+//         .text("DATE OF BIRTH:" + " " + response.birthday)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 410)
-        .text("GENDER:" + " " + response.gender)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 410)
+//         .text("GENDER:" + " " + response.gender)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 460)
-        .text("HOMETOWN:" + " " + response.hometown.name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 460)
+//         .text("HOMETOWN:" + " " + response.hometown.name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 510)
-        .text("LOCATION:" + " " + response.location.name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 510)
+//         .text("LOCATION:" + " " + response.location.name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 560)
-        .text("PROFILE PICTURE:")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 560)
+//         .text("PROFILE PICTURE:")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-        document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
+//         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 800)
-        .text("EXPLORE YOUR ONLINE IDENTITY")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 800)
+//         .text("EXPLORE YOUR ONLINE IDENTITY")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", 750)
-        .text("--------------------------------------------------------------------")
-        .style("font", "20px 'stellar'")
-        .style("fill", "black");
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", 750)
+//         .text("--------------------------------------------------------------------")
+//         .style("font", "20px 'stellar'")
+//         .style("fill", "black");
 
-      var button2 = canvas.append("svg:image")
-        .attr('x', 50)
-        .attr('y', 830)
-        .attr('width', 180)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
+//       var button2 = canvas.append("svg:image")
+//         .attr('x', 50)
+//         .attr('y', 830)
+//         .attr('width', 180)
+//         .attr('height', 90)
+//         .attr("xlink:href", "button.png");
 
-            canvas.append("text")
-              .attr("x", 80)//+30
-              .attr("y", 885)
-              .text("ADVERTISERS")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black");
+//             canvas.append("text")
+//               .attr("x", 80)//+30
+//               .attr("y", 885)
+//               .text("ADVERTISERS")
+//               .style("font", "25px 'stellar'")
+//               .style("fill", "black");
 
-    	svg.on('click', function() {
-  		//console.log("You clicked")
-		//pageLikes();
-		//loadingAds(); 
-		statement();
-		});
+//     	svg.on('click', function() {
+//   		//console.log("You clicked")
+// 		//pageLikes();
+// 		//loadingAds(); 
+// 		statement();
+// 		});
 
-      });//end of api function 
+//       });//end of api function 
 
-    }//end of profile function
+//     }//end of profile function
 
-//==============================================================
+// //==============================================================
 
 //SCREEN 3
 //==============================================================
@@ -359,100 +359,100 @@ function statement(){
 //============================================================== 
 
 
-//SCREEN 4
-//==============================================================
+// //SCREEN 4
+// //==============================================================
 
-function pageLikes(){
+// function pageLikes(){
 
-	console.log("You clicked");
+// 	console.log("You clicked");
 
-   document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
+//    document.getElementById('status').style.visibility = 'hidden';
+//     var rect = canvas.append("rect")
+//         .attr("x", 0)
+//         .attr("y", 0)
+//         .attr("width", width)
+//         .attr("height", 1000)
+//         .style("fill", "white");
 
-    function generateCoords() {
-		var x = Math.floor(Math.random() * (width-50)) + 1;
-		var y = Math.floor(Math.random() * (height-50)) + 1;
-		return [x, y];
-	}
+//     function generateCoords() {
+// 		var x = Math.floor(Math.random() * (width-50)) + 1;
+// 		var y = Math.floor(Math.random() * (height-50)) + 1;
+// 		return [x, y];
+// 	}
 
 
-     FB.api('/me', 'GET', {fields: 'likes'}, 
+//      FB.api('/me', 'GET', {fields: 'likes'}, 
      	
-     	function(response) {
-var info = response.likes; 
-var info2 = info.data;
-			//console testing   
-     		//console.log(response.likes);
-     		//console.log(info2);
-     		//console.log(info2.name);
+//      	function(response) {
+// var info = response.likes; 
+// var info2 = info.data;
+// 			//console testing   
+//      		//console.log(response.likes);
+//      		//console.log(info2);
+//      		//console.log(info2.name);
 
-var yIndex = 1; 
+// var yIndex = 1; 
 
-for (var i = 0; i < info2.length; i++) {
-	console.log(info2[i].name);
-	yIndex++; 
+// for (var i = 0; i < info2.length; i++) {
+// 	console.log(info2[i].name);
+// 	yIndex++; 
 
-	var text = canvas.append("text")
-		.attr("x", 10 )// x coordinate of text
-		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
-		.text(info2[i].name); 
+// 	var text = canvas.append("text")
+// 		.attr("x", 10 )// x coordinate of text
+// 		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
+// 		.text(info2[i].name); 
 
-			//transistion variable 
-			var t = d3.transition()
-   				.duration(10)
+// 			//transistion variable 
+// 			var t = d3.transition()
+//    				.duration(10)
 
 
-			for(j=0; j < info2.length; j++){
-				d3.selectAll("text")
-				.style("opacity", 0)
-				.transition()
-				.delay(function(d,i){ return 100*i; }) //controls how many come on the screen
- 				.duration(10) //controls how fast is changes opacity
-				.style("opacity", 1.0)
-			}// end of for (j) loop 
+// 			for(j=0; j < info2.length; j++){
+// 				d3.selectAll("text")
+// 				.style("opacity", 0)
+// 				.transition()
+// 				.delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+//  				.duration(10) //controls how fast is changes opacity
+// 				.style("opacity", 1.0)
+// 			}// end of for (j) loop 
 
-};//end of for loop  
+// };//end of for loop  
      
 
-  });//end of fb api function 
+//   });//end of fb api function 
 
-       var button5 = canvas.append("svg:image")
-        .attr('x', width - 300)
-        .attr('y', 20)
-        .attr('width', 300)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png")
-        .style("opacity", 0)
-		.transition()
-		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
- 		.duration(100) //controls how fast is changes opacity
-		.style("opacity", 1.0); 
+//        var button5 = canvas.append("svg:image")
+//         .attr('x', width - 300)
+//         .attr('y', 20)
+//         .attr('width', 300)
+//         .attr('height', 90)
+//         .attr("xlink:href", "button.png")
+//         .style("opacity", 0)
+// 		.transition()
+// 		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//  		.duration(100) //controls how fast is changes opacity
+// 		.style("opacity", 1.0); 
 
-            canvas.append("text")
-              .attr("x", width - 230)//+30
-              .attr("y", 75)//+55
-              .text("SHOW ME THE £$")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black")
-		      .style("opacity", 0)
-			  .transition()
-			  .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-		 	  .duration(100) //controls how fast is changes opacity
-			  .style("opacity", 1.0); 
+//             canvas.append("text")
+//               .attr("x", width - 230)//+30
+//               .attr("y", 75)//+55
+//               .text("SHOW ME THE £$")
+//               .style("font", "25px 'stellar'")
+//               .style("fill", "black")
+// 		      .style("opacity", 0)
+// 			  .transition()
+// 			  .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+// 		 	  .duration(100) //controls how fast is changes opacity
+// 			  .style("opacity", 1.0); 
 
-        svg.on('click', function() {
-  		//console.log("You clicked")
-		adFact();
-		});
+//         svg.on('click', function() {
+//   		//console.log("You clicked")
+// 		adFact();
+// 		});
 
-}// end of page likes function
+// }// end of page likes function
 
-//==============================================================
+// //==============================================================
 
 //SCREEN 5
 //==============================================================
@@ -592,8 +592,276 @@ function generalVis(){
 //==============================================================
 
 
-
+//************************************************************
 // ============= SCREENS FOR FACEBOOK REVIEW =================
+//************************************************************
+
+//SCREEN 2 
+//==============================================================
+    function theProfile(){
+
+      var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", "white");
+
+      FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
+
+      var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 20)
+        .attr("width", width)
+        .attr("height", 100)
+        .style("fill", "black");
+
+      var text = canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 95)
+        .text("IDENTITY 2.0")
+        .style("font", "75px 'stellar'")
+        .style("fill", "white");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 180)
+        .text("YOUR PROFILE")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 220)
+        .text("--------------------------------------------------------------------")
+        .style("font", "20px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 260)
+        .text("NAME:" + " " + response.name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 310)
+        .text("USER ID:" + " " + response.id)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 360)
+        .text("DATE OF BIRTH:" + " " + response.birthday)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 410)
+        .text("GENDER:" + " " + response.gender)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 460)
+        .text("HOMETOWN:" + " " + response.hometown.name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 510)
+        .text("LOCATION:" + " " + response.location.name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 560)
+        .text("PROFILE PICTURE:")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+        document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 800)
+        .text("EXPLORE YOUR ONLINE IDENTITY")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", 750)
+        .text("--------------------------------------------------------------------")
+        .style("font", "20px 'stellar'")
+        .style("fill", "black");
+
+      var button2 = canvas.append("svg:image")
+        .attr('x', 50)
+        .attr('y', 830)
+        .attr('width', 180)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png");
+
+            canvas.append("text")
+              .attr("x", 80)//+30
+              .attr("y", 885)
+              .text("ADVERTISERS")
+              .style("font", "25px 'stellar'")
+              .style("fill", "black");
+
+    	svg.on('click', function() {
+  		//console.log("You clicked")
+		pageLikes();
+		//loadingAds(); 
+		//statement();
+		});
+
+      });//end of api function 
+
+    }//end of profile function
+
+//==============================================================
+
+//SCREEN 4
+//==============================================================
+
+function pageLikes(){
+
+	console.log("You clicked");
+
+   document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
+    function generateCoords() {
+		var x = Math.floor(Math.random() * (width-50)) + 1;
+		var y = Math.floor(Math.random() * (height-50)) + 1;
+		return [x, y];
+	}
+
+
+     FB.api('/me', 'GET', {fields: 'likes'}, 
+     	
+     	function(response) {
+var info = response.likes; 
+var info2 = info.data;
+			//console testing   
+     		//console.log(response.likes);
+     		//console.log(info2);
+     		//console.log(info2.name);
+
+var yIndex = 1; 
+
+for (var i = 0; i < info2.length; i++) {
+	console.log(info2[i].name);
+	yIndex++; 
+
+	var text = canvas.append("text")
+		.attr("x", 10 )// x coordinate of text
+		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
+		.text(info2[i].name); 
+
+			//transistion variable 
+			var t = d3.transition()
+   				.duration(10)
+
+
+			for(j=0; j < info2.length; j++){
+				d3.selectAll("text")
+				.style("opacity", 0)
+				.transition()
+				.delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+ 				.duration(10) //controls how fast is changes opacity
+				.style("opacity", 1.0)
+			}// end of for (j) loop 
+
+};//end of for loop  
+     
+
+  });//end of fb api function 
+
+       var button5 = canvas.append("svg:image")
+        .attr('x', width - 300)
+        .attr('y', 20)
+        .attr('width', 300)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png")
+        .style("opacity", 0)
+		.transition()
+		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+ 		.duration(100) //controls how fast is changes opacity
+		.style("opacity", 1.0); 
+
+            canvas.append("text")
+              .attr("x", width - 230)//+30
+              .attr("y", 75)//+55
+              .text("SHOW ME THE £$")
+              .style("font", "25px 'stellar'")
+              .style("fill", "black")
+		      .style("opacity", 0)
+			  .transition()
+			  .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+		 	  .duration(100) //controls how fast is changes opacity
+			  .style("opacity", 1.0); 
+
+        svg.on('click', function() {
+  		//console.log("You clicked")
+		endVis();
+		});
+
+}// end of page likes function
+
+//==============================================================
+
+//SCREEN 6
+//==============================================================
+
+function endVis(){
+
+	var fontS = 40; 
+	var spaceF = 30; 
+	var yP = 80; 
+
+	document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
+    var text = canvas.append("text")
+			.attr("x",30)
+			.attr("y", yP)
+			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+			.style("font", "20px 'stellar'")
+			.style("fill", "black");
+
+    	canvas.append("text")
+			.attr("x",30)
+			.attr("y", yP + (fontS + spaceF))
+			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+			.style("font", "20px 'stellar'")
+			.style("fill", "black");
+
+}// end of endVis function
+
+
+//************************************************************
+// ============= SCREENS FOR FACEBOOK REVIEW =================
+//************************************************************
+// ========================= END =============================
 
 
 //<button class = "button2" id="logout" onclick = "logout()">Logout</button>
