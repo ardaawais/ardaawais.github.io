@@ -83,7 +83,7 @@
     // create our canvas
     var canvas = d3.select("body").append("svg")
       .attr("width", width)
-      .attr("height", 1000);
+      .attr("height", 3000);
 
 
 banner();
@@ -634,16 +634,6 @@ function generalVis(){
         //  console.log(t3[t].name); 
         // }
 
-        var groupInfo = response.groups;  
-        var groupInfo2 = groupInfo.data; 
-
-        for (var i = 0; i < groupInfo2.length; i++) {
-          //console.log(groupInfo);
-          //console.log(groupInfo2);
-          console.log(groupInfo2[i].name);
-          //console.log(groupInfo[g].name);
-        }
-
       var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 20)
@@ -724,6 +714,36 @@ function generalVis(){
         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
 //next Y value needs to be *10 
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", (yStart + (spacer*10)))
+        .text("YOUR GROUPS: ")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+
+        var groupInfo = response.groups;  
+        var groupInfo2 = groupInfo.data; 
+        var yG = 1; 
+
+        for (var i = 0; i < groupInfo2.length; i++) {
+          //console.log(groupInfo);
+          //console.log(groupInfo2);
+          console.log(groupInfo2[i].name);
+          yG++; 
+
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", (yStart + (spacer*10))*yG)
+        .text(groupInfo2[i].name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+
+ 
+        }
+
 
       // var button2 = canvas.append("svg:image")
       //   .attr('x', 50)
