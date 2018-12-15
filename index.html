@@ -101,7 +101,8 @@ banner();
 FB.getLoginStatus(function(response) {
 	if(response.status === 'connected'){
 		document.getElementById('status');
-    newPage();
+    //newPage();
+    theProfile();
     document.getElementById('login').style.visibility = 'hidden';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
