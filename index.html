@@ -720,9 +720,7 @@ function generalVis(){
         .text(groupInfo2[i].name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
-        console.log(yG); 
- 
-        }
+        }//end of for loop for group api
 
       canvas.append("text")
         .attr("x", 50)
@@ -732,16 +730,21 @@ function generalVis(){
         .style("fill", "black");
 
         var teleInfo = response.television; 
-        console.log(teleInfo);  
-        
+        console.log(teleInfo);   
         var teleInfo2 = teleInfo.data; 
-        // var yG = 1; 
+        var yT = 1; 
 
         for (var t = 0; t < teleInfo2.length; t++) {
-          //console.log(groupInfo);
-          //console.log(groupInfo2);
           console.log(teleInfo2[t].name);
-        }
+          yT++;
+
+      canvas.append("text")
+        .attr("x", 100)
+        .attr("y", (yStart + (spacer*35))+(yG*50))
+        .text(groupInfo2[i].name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+        }//end of for loop for tv api
 
 
       // var button2 = canvas.append("svg:image")
