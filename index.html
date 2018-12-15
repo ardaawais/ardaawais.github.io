@@ -624,15 +624,23 @@ function generalVis(){
         // console.log(t3.name);
         //console.log(response.tagged_places.data.latitude);
 
-        console.log(response.groups);
-        console.log(response.television);
-        console.log(response.friends);
-        console.log(response.likes); 
+        // console.log(response.groups);
+        // console.log(response.television);
+        // console.log(response.friends);
+        // console.log(response.likes); 
 
         // for (var t = 0; t < taggedInfo.length; t++) {
         //   console.log('im here'); 
         //  console.log(t3[t].name); 
         // }
+
+        var groupInfo = response.groups;  
+        var groupInfo2 = groupInfo.data; 
+
+        for (var g = 0; g < groupInfo2.length; g++) {
+          console.log(groupInfo);
+          console.log(groupInfo[g].name);
+        }
 
       var rect = canvas.append("rect")
         .attr("x", 0)
