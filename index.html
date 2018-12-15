@@ -600,6 +600,11 @@ function generalVis(){
 //==============================================================
     function theProfile(){
 
+
+      var yStart = 260; 
+      var spacer = 50;
+     // var fontSize = 30; 
+
       var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 0)
@@ -639,49 +644,49 @@ function generalVis(){
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 260)
+        .attr("y", yStart)
         .text("NAME:" + " " + response.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 310)
+        .attr("y", (yStart + spacer))
         .text("USER ID:" + " " + response.id)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 360)
+        .attr("y", (yStart + spacer)*2)
         .text("DATE OF BIRTH:" + " " + response.birthday)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 410)
+        .attr("y", (yStart + spacer)*3)
         .text("GENDER:" + " " + response.gender)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 460)
+        .attr("y", (yStart + spacer)*4)
         .text("HOMETOWN:" + " " + response.hometown.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 510)
+        .attr("y", (yStart + spacer)*5)
         .text("LOCATION:" + " " + response.location.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 560)
+        .attr("y", (yStart + spacer)*6)
         .text("PROFILE PICTURE:")
         .style("font", "30px 'stellar'")
         .style("fill", "black");
@@ -690,14 +695,14 @@ function generalVis(){
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 800)
+        .attr("y", (yStart + spacer)*8)
         .text("EXPLORE YOUR ONLINE IDENTITY")
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
-        .attr("y", 750)
+        .attr("y", (yStart + spacer)*7)
         .text("--------------------------------------------------------------------")
         .style("font", "20px 'stellar'")
         .style("fill", "black");
@@ -718,109 +723,12 @@ function generalVis(){
 
     	svg.on('click', function() {
   		//console.log("You clicked")
-		pageLikes();
-		//loadingAds(); 
-		//statement();
+      endVis(); 
 		});
 
       });//end of api function 
 
     }//end of profile function
-
-//==============================================================
-
-//SCREEN 4
-//==============================================================
-
-function pageLikes(){
-
-	console.log("You clicked");
-
-   document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
-
-    function generateCoords() {
-		var x = Math.floor(Math.random() * (width-50)) + 1;
-		var y = Math.floor(Math.random() * (height-50)) + 1;
-		return [x, y];
-	}
-
-
-     FB.api('/me', 'GET', {fields: 'likes'}, 
-     	
-     	function(response) {
-var info = response.likes; 
-var info2 = info.data;
-			//console testing   
-     		//console.log(response.likes);
-     		//console.log(info2);
-     		//console.log(info2.name);
-
-var yIndex = 1; 
-
-for (var i = 0; i < info2.length; i++) {
-	console.log(info2[i].name);
-	yIndex++; 
-
-	var text = canvas.append("text")
-		.attr("x", 10 )// x coordinate of text
-		.attr("y", 20 * yIndex) // y coordinate of text -- controls it showing a lisy currently 
-		.text(info2[i].name); 
-
-			//transistion variable 
-			var t = d3.transition()
-   				.duration(10)
-
-
-			for(j=0; j < info2.length; j++){
-				d3.selectAll("text")
-				.style("opacity", 0)
-				.transition()
-				.delay(function(d,i){ return 100*i; }) //controls how many come on the screen
- 				.duration(10) //controls how fast is changes opacity
-				.style("opacity", 1.0)
-			}// end of for (j) loop 
-
-};//end of for loop  
-     
-
-  });//end of fb api function 
-
-       var button5 = canvas.append("svg:image")
-        .attr('x', width - 300)
-        .attr('y', 20)
-        .attr('width', 300)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png")
-        .style("opacity", 0)
-		.transition()
-		.delay(function(d,i){ return 400*i; }) //controls how many come on the screen
- 		.duration(100) //controls how fast is changes opacity
-		.style("opacity", 1.0); 
-
-            canvas.append("text")
-              .attr("x", width - 230)//+30
-              .attr("y", 75)//+55
-              .text("CONTINUE")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black")
-		      .style("opacity", 0)
-			  .transition()
-			  .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-		 	  .duration(100) //controls how fast is changes opacity
-			  .style("opacity", 1.0); 
-
-        svg.on('click', function() {
-  		//console.log("You clicked")
-		endVis();
-		});
-
-}// end of page likes function
 
 //==============================================================
 
