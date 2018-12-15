@@ -677,12 +677,13 @@ function generalVis(){
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
-      // canvas.append("text")
-      //   .attr("x", 50)
-      //   .attr("y", (yStart + (spacer*4)))
-      //   .text("HOMETOWN:" + " " + response.hometown.name)
-      //   .style("font", "30px 'stellar'")
-      //   .style("fill", "black");
+     var homeInfo = response.hometown; 
+      canvas.append("text")
+        .attr("x", 50)
+        .attr("y", (yStart + (spacer*4)))
+        .text("HOMETOWN:" + " " + homeInfo.name)
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 50)
