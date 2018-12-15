@@ -617,10 +617,11 @@ function generalVis(){
 
         var taggedInfo = response.tagged_places; 
 
-        var t2 = taggedInfo.place; 
+        var t2 = taggedInfo.data; 
+        var t3 = t2.place;
 
         console.log(response.tagged_places);
-        console.log(t2.name);
+        console.log(t3.name);
         //console.log(response.tagged_places.data.latitude);
 
         console.log(response.groups);
@@ -630,7 +631,7 @@ function generalVis(){
 
         for (var t = 0; t < taggedInfo.length; t++) {
           console.log('im here'); 
-         console.log(taggedInfo2[t].name); 
+         console.log(t3[t].name); 
         }
 
       var rect = canvas.append("rect")
