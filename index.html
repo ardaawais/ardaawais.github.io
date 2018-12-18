@@ -793,14 +793,14 @@ function generalVis(){
 
       canvas.append("text")
         .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*50))
+        .attr("y", (yStart + (spacer*180))+(yTP*60))
         .text(tagInfo3.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*50)+20)
+        .attr("y", (yStart + (spacer*180))+(yTP*60)+20)
         .text("LONGITUDE: " + tagInfo3.location.longitude + "   " + "LATITUDE: " + tagInfo3.location.latitude)
         .style("font", "10px 'stellar'")
         .style("fill", "black");
