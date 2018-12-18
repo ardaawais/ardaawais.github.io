@@ -501,24 +501,24 @@ function adFact(){
 			.style("font", "50px 'stellar'")
 			.style("fill", "black");
 
-	var button8 = canvas.append("svg:image")
-        .attr('x', -10)
-        .attr('y', 550)
-        .attr('width', 400)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
+  	var button8 = canvas.append("svg:image")
+          .attr('x', -10)
+          .attr('y', 550)
+          .attr('width', 400)
+          .attr('height', 90)
+          .attr("xlink:href", "button.png");
 
-            canvas.append("text")
-              .attr("x", 105)//+30
-              .attr("y", 605)//+55
-              .text("WAIT, THERE'S MORE?!")
-              .style("font", "20px 'stellar'")
-              .style("fill", "black");
+              canvas.append("text")
+                .attr("x", 105)//+30
+                .attr("y", 605)//+55
+                .text("WAIT, THERE'S MORE?!")
+                .style("font", "20px 'stellar'")
+                .style("fill", "black");
 
-    	svg.on('click', function() {
-  		//console.log("You clicked")
-		generalVis(); 
-		});
+      	svg.on('click', function() {
+    		//console.log("You clicked")
+  		generalVis(); 
+  		});
 
 }//end of adFact function 
 
@@ -839,31 +839,10 @@ function generalVis(){
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-  //   	newButton.on('click', function() {
-  // 		console.log("You clicked")
-  //     endVis(); 
-		// });
-
-      var newButton2 = canvas.append("rect")
-        .attr("x", 200)
-        .attr("y", (yStart + (spacer*195)) + 150) 
-        .attr("width", 180)
-        .attr("height", 90)
-        .style("fill", "black");
-
-// newButton2.on('click', function(d, i) {
-//     console.log("You clicked", d), i;
-//   endVis();
-
-// });
-
-newButton2.on('click', function() {
-    console.log("You clicked");
-  endVis();
-
-});
-
-
+    	newButton.on('click', function() {
+  		console.log("You clicked")
+      endVis(); 
+		});
 
       });//end of api function 
 
@@ -926,5 +905,6 @@ function fbLogout() {
 <div id = "status"></div>
 <button class = "button" id="login" onclick = "login()">Login to Facebook</button>
 <button id="fbLogout" onclick="fbLogout()">Logout</button> 
+<button id="next" onclick="endVis()">Continue</button> 
 </body>
 </html> 
