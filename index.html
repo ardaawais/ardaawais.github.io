@@ -844,12 +844,12 @@ function generalVis(){
   //     endVis(); 
 		// });
 
-      var newButton2 = canvas.append(rect)
+      var newButton2 = canvas.append("rect")
         .attr('x', 200)
         .attr('y', (yStart + (spacer*195)) + 150) 
         .attr('width', 180)
         .attr('height', 90)
-        .attr("fill", "black");
+        .style("fill", "black");
 
 newButton2.on('click', function(d, i) {
     console.log("You clicked", d), i;
