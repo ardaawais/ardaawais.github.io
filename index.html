@@ -124,6 +124,7 @@ document.getElementById('logout').style.visibility = 'hidden';
     //newPage();
     theProfile();
     document.getElementById('login').style.visibility = 'hidden';
+    document.getElementById('logout').style.visibility = 'visible';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
@@ -158,6 +159,7 @@ document.getElementById('logout').style.visibility = 'hidden';
 		document.getElementById('status');
     theProfile();
     document.getElementById('login').style.visibility = 'hidden';
+    document.getElementById('logout').style.visibility = 'visible';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
