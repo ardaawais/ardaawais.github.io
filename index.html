@@ -690,8 +690,8 @@ function generalVis(){
         .style("fill", "black")
         .style("opacity", 0)
         .transition()
-        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
-        .duration(3000) //controls how fast is changes opacity
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(1000) //controls how fast is changes opacity
         .style("opacity", 1.0);
 
       canvas.append("text")
