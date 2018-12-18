@@ -675,14 +675,24 @@ function generalVis(){
         .attr("y", yStart)
         .text("NAME:" + " " + response.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        .duration(100) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + spacer))
         .text("USER ID:" + " " + response.id)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        .duration(200) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
@@ -850,14 +860,14 @@ function generalVis(){
 
 
         //for loop controlling the opacity -- fades in the words
-      for(j=0; j < info.length; j++){
-        d3.selectAll("text")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 700*i; }) //controls how many come on the screen
-        .duration(100) //controls how fast is changes opacity
-        .style("opacity", 1.0)
-      }
+      // for(j=0; j < info.length; j++){
+      //   d3.selectAll("text")
+      //   .style("opacity", 0)
+      //   .transition()
+      //   .delay(function(d,i){ return 700*i; }) //controls how many come on the screen
+      //   .duration(100) //controls how fast is changes opacity
+      //   .style("opacity", 1.0)
+      // }
 
   //     var newButton = canvas.append("svg:image")
   //       .attr('x', 50)
