@@ -878,14 +878,12 @@ function endVis(){
 	var spaceF = 30; 
 	var yP = 80; 
 
-   window.scrollBy(0, 10300);
-
 	document.getElementById('status').style.visibility = 'hidden';
     var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", width)
-        .attr("height", 10300) //needs to be depended on first page
+        .attr("height", 10300) //needs to be depended on data height of each person
         .style("fill", "white");
 
     var text = canvas.append("text")
