@@ -605,7 +605,6 @@ function generalVis(){
 //==============================================================
     function theProfile(){
 
-
       var yStart = 260; 
       var spacer = 50;
      // var fontSize = 30; 
@@ -618,6 +617,23 @@ function generalVis(){
         .style("fill", "white");
 
       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100),tagged_places.limit(100),groups.limit(100),television.limit(100),friends.limit(100),likes.limit(100)'}, function(response) {
+
+console.log(response.friends);
+      // var likesInfo = response.likes;   
+      // var likesInfo2 = likesInfo.data; 
+      // var yL = 1; 
+
+      // for (var l = 0; l < likesInfo2.length; l++) {
+      // yL++; 
+
+      // canvas.append("text")
+      //   .attr("x", 100)
+      //   .attr("y", (yStart + (spacer*77))+(yL*50))
+      //   .text(likesInfo2[l].name)
+      //   .style("font", "30px 'stellar'")
+      //   .style("fill", "black");
+      //   //console.log(yL);
+        }//end of for loop for likes api
 
 
    
@@ -801,7 +817,7 @@ function generalVis(){
       canvas.append("text")
         .attr("x", 100)
         .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
-        .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "|" + "LATITUDE: " + tagInfo3.location.latitude)
+        .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "|" + " " + "LATITUDE: " + tagInfo3.location.latitude)
         .style("font", "10px 'stellar'")
         .style("fill", "black");
 
