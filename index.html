@@ -844,8 +844,14 @@ function generalVis(){
   //     endVis(); 
 		// });
 
+      var newButton2 = canvas.append(rect)
+        .attr('x', 200)
+        .attr('y', (yStart + (spacer*195)) + 150) 
+        .attr('width', 180)
+        .attr('height', 90)
+        .attr("fill", "black");
 
-newButton.on("click", function(d, i) {
+newButton2.on('click', function(d, i) {
     console.log("You clicked", d), i;
   endVis();
 
