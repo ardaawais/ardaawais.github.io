@@ -825,7 +825,7 @@ function generalVis(){
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
-      var button = canvas.append("svg:image")
+      var newButton = canvas.append("svg:image")
         .attr('x', 50)
         .attr('y', (yStart + (spacer*195)) + 150) 
         .attr('width', 180)
@@ -839,10 +839,12 @@ function generalVis(){
               .style("font", "25px 'stellar'")
               .style("fill", "black");
 
-    	svg.on('click', function() {
-  		//console.log("You clicked")
-      endVis(); 
-		});
+  //   	svg.on('click', function() {
+  // 		//console.log("You clicked")
+  //     endVis(); 
+		// });
+
+     newButton.onclick = function() {endVis()};
 
       });//end of api function 
 
