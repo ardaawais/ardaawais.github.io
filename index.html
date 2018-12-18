@@ -798,7 +798,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*35)))//needs to calculate space that was taken up above
         .text("YOU WATCH: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(18000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
         var teleInfo = response.television;    
         var teleInfo2 = teleInfo.data; 
@@ -813,7 +818,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*35))+(yT*50))
         .text(teleInfo2[t].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(20000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
         //console.log(yT);
         }//end of for loop for tv api
 
@@ -822,7 +832,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*77)))//needs to calculate space that was taken up above
         .text("YOU LIKE: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(22000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       var likesInfo = response.likes;   
       var likesInfo2 = likesInfo.data; 
@@ -836,7 +851,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*77))+(yL*50))
         .text(likesInfo2[l].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(24000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
         //console.log(yL);
         }//end of for loop for likes api 
 
@@ -845,7 +865,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*180))+50)//needs to calculate space that was taken up above
         .text("YOU'VE BEEN: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(26000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
     var tagInfo = response.tagged_places; 
     var tagInfo2 = tagInfo.data; 
@@ -862,14 +887,24 @@ function generalVis(){
         .attr("y", (yStart + (spacer*180))+(yTP*80))
         .text(tagInfo3.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(28000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 100)
         .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
         .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "," + " " + "LATITUDE: " + tagInfo3.location.latitude)
         .style("font", "10px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(30000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
         }//end of for loop for tagged places
 
@@ -883,7 +918,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*195)))//needs to calculate space that was taken up above
         .text("YOUR INFLUENCE: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(32000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
 
         canvas.append("text")
@@ -891,7 +931,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*195)) + 100)//needs to calculate space that was taken up above
         .text("FRIEND COUNT: " + friendsInfo2.total_count)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(34000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
 
         //for loop controlling the opacity -- fades in the words
