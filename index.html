@@ -877,9 +877,9 @@ function endVis(){
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	var fontS = 40; 
-	var spaceF = 30; 
-	var yP = 80; 
+	var fontS = 50; 
+	var spaceF = 50; 
+	var yP = 100; 
 
 	document.getElementById('status').style.visibility = 'hidden';
     var rect = canvas.append("rect")
@@ -893,14 +893,14 @@ function endVis(){
 			.attr("x",30)
 			.attr("y", yP)
 			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-			.style("font", "20px 'stellar'")
+			.style("font", "50px 'stellar'")
 			.style("fill", "black");
 
     	canvas.append("text")
 			.attr("x",30)
 			.attr("y", yP + (fontS + spaceF))
 			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-			.style("font", "20px 'stellar'")
+			.style("font", "50px 'stellar'")
 			.style("fill", "black");
 
 }// end of endVis function
