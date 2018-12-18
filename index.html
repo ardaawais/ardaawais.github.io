@@ -618,11 +618,6 @@ function generalVis(){
 
       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100),tagged_places.limit(100),groups.limit(100),television.limit(100),friends.limit(100),likes.limit(100)'}, function(response) {
 
-console.log(response.friends);
-var friendsInfo = response.friends;
-console.log(friendsInfo.summary); 
-var friendsInfo2 = friendsInfo.summary;
-console.log(friendsInfo2.total_count); 
    
       var rect = canvas.append("rect")
         .attr("x", 0)
@@ -830,12 +825,12 @@ console.log(friendsInfo2.total_count);
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
-      // var button2 = canvas.append("svg:image")
-      //   .attr('x', 50)
-      //   .attr('y', 830)
-      //   .attr('width', 180)
-      //   .attr('height', 90)
-      //   .attr("xlink:href", "button.png");
+      var button = canvas.append("svg:image")
+        .attr('x', 50)
+        .attr('y', (yStart + (spacer*195)) + 200) 
+        .attr('width', 180)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png");
 
       //       canvas.append("text")
       //         .attr("x", 80)//+30
