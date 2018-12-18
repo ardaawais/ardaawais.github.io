@@ -874,10 +874,6 @@ function generalVis(){
 
 function endVis(){
 
-      var canvas = d3.select("body").append("svg")
-      .attr("width", width)
-      .attr("height", height); //how can I adjust this to be adjustable to someones data 
-
 	var fontS = 40; 
 	var spaceF = 30; 
 	var yP = 80; 
@@ -887,7 +883,7 @@ function endVis(){
         .attr("x", 0)
         .attr("y", 0)
         .attr("width", width)
-        .attr("height", height)
+        .attr("height", 10300) //needs to be depended on first page
         .style("fill", "white");
 
     var text = canvas.append("text")
