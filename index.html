@@ -793,16 +793,16 @@ function generalVis(){
 
       canvas.append("text")
         .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*80))
+        .attr("y", (yStart + (spacer*181))+(yTP*80))
         .text(tagInfo3.name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
       canvas.append("text")
         .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
-        .text("LONGITUDE: " + tagInfo3.location.longitude)
-        .style("font", "10px 'stellar'")
+        .attr("y", (yStart + (spacer*180))+(yTP*80)+25)
+        .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "LATITUDE: " + tagInfo3.location.latitude)
+        .style("font", "15px 'stellar'")
         .style("fill", "black");
 
         }//end of for loop for tagged places
