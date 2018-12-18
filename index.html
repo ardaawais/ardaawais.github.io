@@ -908,18 +908,19 @@ function endVis(){
 
 function fbLogout() {
 
-    FB.getLoginStatus(function(response) {
-    console.log(response);
-    if (response && response.status === 'connected') {
-      FB.logout(function(response) {
-        window.location.reload();
-      });
-    }
-  });
-        // FB.logout(function (response) {
-        //     //Do what ever you want here when logged out like reloading the page
-        //     window.location.reload();
-        // });
+  //   FB.getLoginStatus(function(response) {
+  //   console.log(response);
+  //   if (response && response.status === 'connected') {
+  //     FB.logout(function(response) {
+  //       window.location.reload();
+  //     });
+  //   }
+  // });
+  
+        FB.logout(function (response) {
+            //Do what ever you want here when logged out like reloading the page
+            window.location.reload();
+        });
     }
 
 
