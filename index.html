@@ -771,12 +771,12 @@ function generalVis(){
         .text(likesInfo2[l].name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
-        console.log(yL);
+        //console.log(yL);
         }//end of for loop for likes api 
 
         canvas.append("text")
         .attr("x", 50)
-        .attr("y", (yStart + (spacer*120)))//needs to calculate space that was taken up above
+        .attr("y", (yStart + (spacer*180)))//needs to calculate space that was taken up above
         .text("YOU'VE BEEN: ")
         .style("font", "30px 'stellar'")
         .style("fill", "black");
@@ -788,8 +788,8 @@ function generalVis(){
     for (var tP = 0; tP < tagInfo2.length; tP++) {
     yTP++; 
     var tagInfo3 = tagInfo2[tP].place; 
-    console.log(tagInfo3); 
-    console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
+    // console.log(tagInfo3); 
+    // console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
 
       // canvas.append("text")
       //   .attr("x", 100)
