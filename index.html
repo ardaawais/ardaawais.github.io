@@ -724,21 +724,36 @@ function generalVis(){
         .attr("y", (yStart + (spacer*4)))
         .text("HOMETOWN:" + " " + homeInfo.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(8000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*5)))
         .text("LOCATION:" + " " + response.location.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(10000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*6)))
         .text("PROFILE PICTURE:")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(12000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
@@ -749,7 +764,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*10)))
         .text("YOUR GROUPS: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(14000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
 
         var groupInfo = response.groups;  
@@ -765,7 +785,12 @@ function generalVis(){
         .attr("y", (yStart + (spacer*10))+(yG*50))
         .text(groupInfo2[i].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        .duration(16000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
         }//end of for loop for group api
 
       canvas.append("text")
