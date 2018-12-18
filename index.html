@@ -623,23 +623,6 @@ var friendsInfo = response.friends;
 console.log(friendsInfo.summary); 
 var friendsInfo2 = friendsInfo.summary;
 console.log(friendsInfo2.total_count); 
-      // var likesInfo = response.likes;   
-      // var likesInfo2 = likesInfo.data; 
-      // var yL = 1; 
-
-      // for (var l = 0; l < likesInfo2.length; l++) {
-      // yL++; 
-
-      // canvas.append("text")
-      //   .attr("x", 100)
-      //   .attr("y", (yStart + (spacer*77))+(yL*50))
-      //   .text(likesInfo2[l].name)
-      //   .style("font", "30px 'stellar'")
-      //   .style("fill", "black");
-      //   //console.log(yL);
-        //}//end of for loop for likes api
-
-
    
       var rect = canvas.append("rect")
         .attr("x", 0)
@@ -824,8 +807,16 @@ console.log(friendsInfo2.total_count);
         .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "," + " " + "LATITUDE: " + tagInfo3.location.latitude)
         .style("font", "10px 'stellar'")
         .style("fill", "black");
+        console.log(yTP);
 
         }//end of for loop for tagged places
+
+
+    console.log(response.friends);
+    var friendsInfo = response.friends;
+    console.log(friendsInfo.summary); 
+    var friendsInfo2 = friendsInfo.summary;
+    console.log(friendsInfo2.total_count); 
 
 
       // var button2 = canvas.append("svg:image")
