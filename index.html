@@ -699,14 +699,24 @@ function generalVis(){
         .attr("y", (yStart + (spacer*2)))
         .text("DATE OF BIRTH:" + " " + response.birthday)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 600*i; }) //controls how many come on the screen
+        .duration(1000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*3)))
         .text("GENDER:" + " " + response.gender)
         .style("font", "30px 'stellar'")
-        .style("fill", "black");
+        .style("fill", "black")
+        .style("opacity", 0)
+        .transition()
+        .delay(function(d,i){ return 800*i; }) //controls how many come on the screen
+        .duration(1000) //controls how fast is changes opacity
+        .style("opacity", 1.0);
 
      var homeInfo = response.hometown; 
       canvas.append("text")
