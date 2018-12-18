@@ -619,25 +619,8 @@ function generalVis(){
 
       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100),tagged_places.limit(100),groups.limit(100),television.limit(100),friends.limit(100),likes.limit(100)'}, function(response) {
 
-        //console.log(response.tagged_places);
 
-        var tagInfo = response.tagged_places; 
-        //console.log(tagInfo.data); 
-        var tagInfo2 = tagInfo.data; 
-
-        // var likesInfo = response.likes;   
-        // var likesInfo2 = likesInfo.data; 
-        // //var yL = 1; 
-
-        for (var tP = 0; tP < tagInfo2.length; tP++) {
-          //yL++; 
-          var tagInfo3 = tagInfo2[tP].place; 
-          console.log(tagInfo3); 
-
-        console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
-        }//end of for loop for likes api 
    
-
       var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 20)
@@ -775,12 +758,12 @@ function generalVis(){
         .style("font", "30px 'stellar'")
         .style("fill", "black");
 
-        var likesInfo = response.likes;   
-        var likesInfo2 = likesInfo.data; 
-        var yL = 1; 
+      var likesInfo = response.likes;   
+      var likesInfo2 = likesInfo.data; 
+      var yL = 1; 
 
-        for (var l = 0; l < likesInfo2.length; l++) {
-          yL++; 
+      for (var l = 0; l < likesInfo2.length; l++) {
+      yL++; 
 
       canvas.append("text")
         .attr("x", 100)
@@ -788,9 +771,34 @@ function generalVis(){
         .text(likesInfo2[l].name)
         .style("font", "30px 'stellar'")
         .style("fill", "black");
-        //console.log(likesInfo2[l].name);
+        console.log(yL);
         }//end of for loop for likes api 
 
+        canvas.append("text")
+        .attr("x", 50)
+        .attr("y", (yStart + (spacer*120)))//needs to calculate space that was taken up above
+        .text("YOU'VE BEEN: ")
+        .style("font", "30px 'stellar'")
+        .style("fill", "black");
+
+    var tagInfo = response.tagged_places; 
+    var tagInfo2 = tagInfo.data; 
+    var yTP = 1; 
+
+    for (var tP = 0; tP < tagInfo2.length; tP++) {
+    yTP++; 
+    var tagInfo3 = tagInfo2[tP].place; 
+    console.log(tagInfo3); 
+    console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
+
+      // canvas.append("text")
+      //   .attr("x", 100)
+      //   .attr("y", (yStart + (spacer*77))+(yL*50))
+      //   .text(tagInfo3[tP].name)
+      //   .style("font", "30px 'stellar'")
+      //   .style("fill", "black");
+
+        }//end of for loop for tagged places
 
 
       // var button2 = canvas.append("svg:image")
