@@ -675,48 +675,48 @@ function generalVis(){
         .attr("y", yStart)
         .text("NAME:" + " " + response.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
-        .duration(1000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black");
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        // .duration(1000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + spacer))
         .text("USER ID:" + " " + response.id)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
-        .duration(2000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black");
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        // .duration(2000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*2)))
         .text("DATE OF BIRTH:" + " " + response.birthday)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
-        .duration(4000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black");
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        // .duration(4000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*3)))
         .text("GENDER:" + " " + response.gender)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
-        .duration(6000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black");
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 200*i; }) //controls how many come on the screen
+        // .duration(6000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
 console.log(response.hometown); 
      var homeInfo = response.hometown; 
@@ -725,36 +725,36 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*4)))
         .text("HOMETOWN:" + " " + homeInfo.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(8000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(8000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*5)))
         .text("LOCATION:" + " " + response.location.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(10000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black");
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(10000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 50)
         .attr("y", (yStart + (spacer*6)))
         .text("PROFILE PICTURE:")
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(12000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(12000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
 
@@ -765,12 +765,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*10)))
         .text("YOUR GROUPS: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(14000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(14000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
 
         var groupInfo = response.groups;  
@@ -786,12 +786,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*10))+(yG*50))
         .text(groupInfo2[i].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(16000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(16000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
         }//end of for loop for group api
 
       canvas.append("text")
@@ -800,11 +800,11 @@ console.log(response.hometown);
         .text("YOU WATCH: ")
         .style("font", "30px 'stellar'")
         .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(18000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("opacity", 0); 
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(18000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
         var teleInfo = response.television;    
         var teleInfo2 = teleInfo.data; 
@@ -819,12 +819,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*35))+(yT*50))
         .text(teleInfo2[t].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(20000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(20000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
         //console.log(yT);
         }//end of for loop for tv api
 
@@ -833,12 +833,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*77)))//needs to calculate space that was taken up above
         .text("YOU LIKE: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(22000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(22000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       var likesInfo = response.likes;   
       var likesInfo2 = likesInfo.data; 
@@ -852,12 +852,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*77))+(yL*50))
         .text(likesInfo2[l].name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(24000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(24000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
         //console.log(yL);
         }//end of for loop for likes api 
 
@@ -866,12 +866,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*180))+50)//needs to calculate space that was taken up above
         .text("YOU'VE BEEN: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(26000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(26000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
     var tagInfo = response.tagged_places; 
     var tagInfo2 = tagInfo.data; 
@@ -888,24 +888,24 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*180))+(yTP*80))
         .text(tagInfo3.name)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(28000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(28000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
       canvas.append("text")
         .attr("x", 100)
         .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
         .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "," + " " + "LATITUDE: " + tagInfo3.location.latitude)
         .style("font", "10px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(30000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(30000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
         }//end of for loop for tagged places
 
@@ -919,12 +919,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*195)))//needs to calculate space that was taken up above
         .text("YOUR INFLUENCE: ")
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(32000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(32000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
 
         canvas.append("text")
@@ -932,12 +932,12 @@ console.log(response.hometown);
         .attr("y", (yStart + (spacer*195)) + 100)//needs to calculate space that was taken up above
         .text("FRIEND COUNT: " + friendsInfo2.total_count)
         .style("font", "30px 'stellar'")
-        .style("fill", "black")
-        .style("opacity", 0)
-        .transition()
-        .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        .duration(34000) //controls how fast is changes opacity
-        .style("opacity", 1.0);
+        .style("fill", "black"); 
+        // .style("opacity", 0)
+        // .transition()
+        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+        // .duration(34000) //controls how fast is changes opacity
+        // .style("opacity", 1.0);
 
 
         //for loop controlling the opacity -- fades in the words
