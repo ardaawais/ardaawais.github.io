@@ -137,8 +137,8 @@ banner();
 
 
          function statusChangeCallback(response){
-        location.reload();
          if(response.status === 'connected'){
+           location.reload();
            console.log('Logged in and authenticated');
            setElements(true);
            theProfile();
