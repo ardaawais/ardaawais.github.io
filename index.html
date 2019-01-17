@@ -1043,7 +1043,13 @@ function fbLogout() {
 
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
 <div id = "status"></div>
-<button scope = "public_profile, user_birthday"class = "button" id="login" onclick = "login()">Login to Facebook</button>
+<button 
+	scope = "public_profile,user_birthday"
+	class = "button" 
+	id="login" 
+	onclick = "login()" 
+	>Login to Facebook
+</button>
 <button class = "button2"id="logout" onclick="fbLogout()">Logout</button> 
 <button class = "button3"id="next" onclick="endVis()">Continue</button> 
 </body>
