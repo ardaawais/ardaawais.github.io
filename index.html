@@ -772,143 +772,146 @@ console.log(response.hometown);
         // .duration(14000) //controls how fast is changes opacity
         // .style("opacity", 1.0);
 
-console.log(response.groups); 
-        var groupInfo = response.groups;  
-        var groupInfo2 = groupInfo.data; 
-        var yG = 1; 
 
-        for (var i = 0; i < groupInfo2.length; i++) {
-          //console.log(groupInfo2[i].name);
-          yG++; 
+//----- not accepted via fb review 
+// console.log(response.groups); 
+//         var groupInfo = response.groups;  
+//         var groupInfo2 = groupInfo.data; 
+//         var yG = 1; 
 
-      canvas.append("text")
-        .attr("x", 100)
-        .attr("y", (yStart + (spacer*10))+(yG*50))
-        .text(groupInfo2[i].name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(16000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
-        }//end of for loop for group api
+//         for (var i = 0; i < groupInfo2.length; i++) {
+//           //console.log(groupInfo2[i].name);
+//           yG++; 
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", (yStart + (spacer*35)))//needs to calculate space that was taken up above
-        .text("YOU WATCH: ")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black");
-        // .style("opacity", 0); 
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(18000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
+//       canvas.append("text")
+//         .attr("x", 100)
+//         .attr("y", (yStart + (spacer*10))+(yG*50))
+//         .text(groupInfo2[i].name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(16000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
+//         }//end of for loop for group api
 
-        var teleInfo = response.television;    
-        var teleInfo2 = teleInfo.data; 
-        var yT = 1; 
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", (yStart + (spacer*35)))//needs to calculate space that was taken up above
+//         .text("YOU WATCH: ")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black");
+//         // .style("opacity", 0); 
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(18000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
 
-        for (var t = 0; t < teleInfo2.length; t++) {
-          //console.log(teleInfo2[t].name);
-          yT++;
+//         var teleInfo = response.television;    
+//         var teleInfo2 = teleInfo.data; 
+//         var yT = 1; 
 
-      canvas.append("text")
-        .attr("x", 100)
-        .attr("y", (yStart + (spacer*35))+(yT*50))
-        .text(teleInfo2[t].name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(20000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
-        //console.log(yT);
-        }//end of for loop for tv api
+//         for (var t = 0; t < teleInfo2.length; t++) {
+//           //console.log(teleInfo2[t].name);
+//           yT++;
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", (yStart + (spacer*77)))//needs to calculate space that was taken up above
-        .text("YOU LIKE: ")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(22000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
+//       canvas.append("text")
+//         .attr("x", 100)
+//         .attr("y", (yStart + (spacer*35))+(yT*50))
+//         .text(teleInfo2[t].name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(20000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
+//         //console.log(yT);
+//         }//end of for loop for tv api
 
-      var likesInfo = response.likes;   
-      var likesInfo2 = likesInfo.data; 
-      var yL = 1; 
+//       canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", (yStart + (spacer*77)))//needs to calculate space that was taken up above
+//         .text("YOU LIKE: ")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(22000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
 
-      for (var l = 0; l < likesInfo2.length; l++) {
-      yL++; 
+//       var likesInfo = response.likes;   
+//       var likesInfo2 = likesInfo.data; 
+//       var yL = 1; 
 
-      canvas.append("text")
-        .attr("x", 100)
-        .attr("y", (yStart + (spacer*77))+(yL*50))
-        .text(likesInfo2[l].name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(24000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
-        //console.log(yL);
-        }//end of for loop for likes api 
+//       for (var l = 0; l < likesInfo2.length; l++) {
+//       yL++; 
 
-        canvas.append("text")
-        .attr("x", 50)
-        .attr("y", (yStart + (spacer*180))+50)//needs to calculate space that was taken up above
-        .text("YOU'VE BEEN: ")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(26000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
+//       canvas.append("text")
+//         .attr("x", 100)
+//         .attr("y", (yStart + (spacer*77))+(yL*50))
+//         .text(likesInfo2[l].name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(24000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
+//         //console.log(yL);
+//         }//end of for loop for likes api 
 
-    var tagInfo = response.tagged_places; 
-    var tagInfo2 = tagInfo.data; 
-    var yTP = 1; 
+//         canvas.append("text")
+//         .attr("x", 50)
+//         .attr("y", (yStart + (spacer*180))+50)//needs to calculate space that was taken up above
+//         .text("YOU'VE BEEN: ")
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(26000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
 
-    for (var tP = 0; tP < tagInfo2.length; tP++) {
-    yTP++; 
-    var tagInfo3 = tagInfo2[tP].place; 
-    // console.log(tagInfo3); 
-    // console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
+//     var tagInfo = response.tagged_places; 
+//     var tagInfo2 = tagInfo.data; 
+//     var yTP = 1; 
 
-      canvas.append("text")
-        .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*80))
-        .text(tagInfo3.name)
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(28000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
+//     for (var tP = 0; tP < tagInfo2.length; tP++) {
+//     yTP++; 
+//     var tagInfo3 = tagInfo2[tP].place; 
+//     // console.log(tagInfo3); 
+//     // console.log(tagInfo3.name + ' ' + tagInfo3.location.longitude + ' ' +  tagInfo3.location.latitude);
 
-      canvas.append("text")
-        .attr("x", 100)
-        .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
-        .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "," + " " + "LATITUDE: " + tagInfo3.location.latitude)
-        .style("font", "10px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(30000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
+//       canvas.append("text")
+//         .attr("x", 100)
+//         .attr("y", (yStart + (spacer*180))+(yTP*80))
+//         .text(tagInfo3.name)
+//         .style("font", "30px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(28000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
 
-        }//end of for loop for tagged places
+//       canvas.append("text")
+//         .attr("x", 100)
+//         .attr("y", (yStart + (spacer*180))+(yTP*80)+20)
+//         .text("LONGITUDE: " + tagInfo3.location.longitude + " " + "," + " " + "LATITUDE: " + tagInfo3.location.latitude)
+//         .style("font", "10px 'stellar'")
+//         .style("fill", "black"); 
+//         // .style("opacity", 0)
+//         // .transition()
+//         // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+//         // .duration(30000) //controls how fast is changes opacity
+//         // .style("opacity", 1.0);
 
+//         }//end of for loop for tagged places
+
+//----- END: not accepted via fb review 
 
     var friendsInfo = response.friends;
     var friendsInfo2 = friendsInfo.summary;
