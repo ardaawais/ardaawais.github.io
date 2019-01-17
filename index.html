@@ -120,24 +120,29 @@ banner();
     });
 
 
-FB.getLoginStatus(function(response) {
-document.getElementById('logout').style.visibility = 'hidden';
-	if(response.status === 'connected'){
-		document.getElementById('status');
-	    theProfile(); //load the next page of the visulisation
-	    document.getElementById('login').style.visibility = 'hidden';
-	    document.getElementById('logout').style.visibility = 'visible';
-	    document.getElementById('Wtext').style.visibility = 'hidden';}
-		else if(response.status === 'not_authorized'){
-			document.getElementById('status').innerHTML = 'we are not logged in';
-    }
-			else {
-				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-      }
+    FB.getLoginStatus(function(response) {
+    	statusChangeCallback(response);
+    });
+
+// FB.getLoginStatus(function(response) {
+// document.getElementById('logout').style.visibility = 'hidden';
+// 	if(response.status === 'connected'){
+// 		document.getElementById('status');
+// 	    theProfile(); //load the next page of the visulisation
+// 	    document.getElementById('login').style.visibility = 'hidden';
+// 	    document.getElementById('logout').style.visibility = 'visible';
+// 	    document.getElementById('Wtext').style.visibility = 'hidden';}
+// 		else if(response.status === 'not_authorized'){
+// 			document.getElementById('status').innerHTML = 'we are not logged in';
+//     }
+// 			else {
+// 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
+//       }
 			
-		})
+// 		})
 
 };
+
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -147,26 +152,55 @@ document.getElementById('logout').style.visibility = 'hidden';
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 
-  function login(){
-document.getElementById('logout').style.visibility = 'hidden';
-  	FB.login(function (response) {
-  			if(response.status === 'connected'){
-		document.getElementById('status');
-    theProfile();
-    document.getElementById('login').style.visibility = 'hidden';
-    document.getElementById('logout').style.visibility = 'visible';
-    document.getElementById('Wtext').style.visibility = 'hidden';}
-		else if(response.status === 'not_authorized'){
-			document.getElementById('status').innerHTML = 'we are not logged in';
-			    document.getElementById('login').style.visibility = 'visable';
-    }
-			else {
-				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-				    document.getElementById('login').style.visibility = 'visable';
+
+         function statusChangeCallback(response){
+         if(response.status === 'connected'){
+           console.log('Logged in and authenticated');
+           setElements(true);
+           theProfile();
+         } else {
+           console.log('Not authenticated');
+           setElements(false);
+         }
+       }
+      function checkLoginState() {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
       }
 
-  	});
-  }
+            function setElements(isLoggedIn){
+        if(isLoggedIn){
+          document.getElementById('logout').style.display = 'block';
+          document.getElementById('login').style.display = 'none';
+          document.getElementById('Wtext').style.display = 'none';
+        } else {
+          document.getElementById('logout').style.display = 'none';
+          document.getElementById('login').style.display = 'block';
+          document.getElementById('Wtext').style.display = 'block';
+        }
+      }
+
+//   function login(){
+// document.getElementById('logout').style.visibility = 'hidden';
+//   	FB.login(function (response) {
+//   			if(response.status === 'connected'){
+// 		document.getElementById('status');
+//     theProfile();
+//     document.getElementById('login').style.visibility = 'hidden';
+//     document.getElementById('logout').style.visibility = 'visible';
+//     document.getElementById('Wtext').style.visibility = 'hidden';}
+// 		else if(response.status === 'not_authorized'){
+// 			document.getElementById('status').innerHTML = 'we are not logged in';
+// 			    document.getElementById('login').style.visibility = 'visable';
+//     }
+// 			else {
+// 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
+// 				    document.getElementById('login').style.visibility = 'visable';
+//       }
+
+//   	});
+//   }
 
 
 //SCREEN 1 
