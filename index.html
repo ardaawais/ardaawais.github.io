@@ -136,18 +136,15 @@ FB.getLoginStatus(function(response) {
 document.getElementById('logout').style.visibility = 'hidden';
 	if(response.status === 'connected'){
 		document.getElementById('status');
-    //newPage();
-    theProfile();
-    document.getElementById('login').style.visibility = 'hidden';
-    document.getElementById('logout').style.visibility = 'visible';
-    document.getElementById('Wtext').style.visibility = 'hidden';}
+	    theProfile(); //load the next page of the visulisation
+	    document.getElementById('login').style.visibility = 'none';
+	    document.getElementById('logout').style.visibility = 'visible';
+	    document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
-      //document.getElementById('logout').style.visibility = 'hidden';
     }
 			else {
 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-        //document.getElementById('logout').style.visibility = 'hidden';
       }
 			
 		})
@@ -173,7 +170,7 @@ document.getElementById('logout').style.visibility = 'hidden';
   			if(response.status === 'connected'){
 		document.getElementById('status');
     theProfile();
-    document.getElementById('login').style.visibility = 'hidden';
+    document.getElementById('login').style.visibility = 'none';
     document.getElementById('logout').style.visibility = 'visible';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
