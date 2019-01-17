@@ -137,7 +137,7 @@ document.getElementById('logout').style.visibility = 'hidden';
 	if(response.status === 'connected'){
 		document.getElementById('status');
 	    theProfile(); //load the next page of the visulisation
-	    document.getElementById('login').style.visibility = 'none';
+	    document.getElementById('login').style.visibility = 'block';
 	    document.getElementById('logout').style.visibility = 'visible';
 	    document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
@@ -170,7 +170,7 @@ document.getElementById('logout').style.visibility = 'hidden';
   			if(response.status === 'connected'){
 		document.getElementById('status');
     theProfile();
-    document.getElementById('login').style.visibility = 'none';
+    document.getElementById('login').style.visibility = 'block';
     document.getElementById('logout').style.visibility = 'visible';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
