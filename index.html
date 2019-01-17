@@ -1045,7 +1045,9 @@ function fbLogout() {
 <div id = "status"></div>
 
 <fb:login-button
-scope ="public_profile,user_birthday">
+scope ="public_profile,user_birthday" 
+id="login" 
+onclick = "login()" >
 </fb:login-button>
 
 <button 
