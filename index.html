@@ -137,6 +137,7 @@ banner();
 
 
          function statusChangeCallback(response){
+        location.reload();
          if(response.status === 'connected'){
            console.log('Logged in and authenticated');
            setElements(true);
