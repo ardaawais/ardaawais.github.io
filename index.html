@@ -138,7 +138,6 @@ banner();
 
          function statusChangeCallback(response){
          if(response.status === 'connected'){
-           location.reload();
            console.log('Logged in and authenticated');
            setElements(true);
            theProfile();
@@ -149,9 +148,9 @@ banner();
        }
 
       function checkLoginState() {
+      	location.reload(); 
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
-          location.reload(); 
         });
       }
 
