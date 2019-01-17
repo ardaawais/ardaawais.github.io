@@ -18,19 +18,9 @@
       #login{
       	top:250px;
       	left:50px;
-      	background-color: #3b5998;
-      	border: none;
-      	padding: 10px 100px;
-      	text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      position:absolute;
-      border-radius: 2px;
       }
 
-    .button {
+/*    .button {
       background-color: #3b5998;
       border: none;
       color: white;
@@ -43,9 +33,7 @@
       cursor: pointer;
       position:absolute;
       border-radius: 2px;
-/*      top:250px;
-      left:50px;*/
-    }
+    }*/
 
         .button2 {
       background-color: #3b5998;
@@ -148,13 +136,8 @@ document.getElementById('logout').style.visibility = 'hidden';
       }
 			
 		})
-	//}
-    //statusChangeCallback(response);
+
 };
-
-  //};
-
-  //FB.AppEvents.logPageView(); 
 
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
@@ -175,11 +158,9 @@ document.getElementById('logout').style.visibility = 'hidden';
     document.getElementById('Wtext').style.visibility = 'hidden';}
 		else if(response.status === 'not_authorized'){
 			document.getElementById('status').innerHTML = 'we are not logged in';
-      //document.getElementById('logout').style.visibility = 'hidden';
     }
 			else {
 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-        //document.getElementById('logout').style.visibility = 'hidden';
       }
 
   	});
@@ -207,144 +188,6 @@ document.getElementById('logout').style.visibility = 'hidden';
 
     }// end of banner function 
 
-//==============================================================
-
-// //SCREEN 2 
-// //==============================================================
-//     function theProfile(){
-
-//       var rect = canvas.append("rect")
-//         .attr("x", 0)
-//         .attr("y", 0)
-//         .attr("width", width)
-//         .attr("height", height)
-//         .style("fill", "white");
-
-//       FB.api('/me', 'GET', {fields: 'name,id,gender,hometown,birthday,location,picture.width(100).height(100)'}, function(response) {
-
-//       var rect = canvas.append("rect")
-//         .attr("x", 0)
-//         .attr("y", 20)
-//         .attr("width", width)
-//         .attr("height", 100)
-//         .style("fill", "black");
-
-//       var text = canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 95)
-//         .text("IDENTITY 2.0")
-//         .style("font", "75px 'stellar'")
-//         .style("fill", "white");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 180)
-//         .text("YOUR PROFILE")
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 220)
-//         .text("--------------------------------------------------------------------")
-//         .style("font", "20px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 260)
-//         .text("NAME:" + " " + response.name)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 310)
-//         .text("USER ID:" + " " + response.id)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 360)
-//         .text("DATE OF BIRTH:" + " " + response.birthday)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 410)
-//         .text("GENDER:" + " " + response.gender)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 460)
-//         .text("HOMETOWN:" + " " + response.hometown.name)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 510)
-//         .text("LOCATION:" + " " + response.location.name)
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 560)
-//         .text("PROFILE PICTURE:")
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//         document.getElementById('status').innerHTML = "<img class = img src='" + response.picture.data.url + "'>";
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 800)
-//         .text("EXPLORE YOUR ONLINE IDENTITY")
-//         .style("font", "30px 'stellar'")
-//         .style("fill", "black");
-
-//       canvas.append("text")
-//         .attr("x", 50)
-//         .attr("y", 750)
-//         .text("--------------------------------------------------------------------")
-//         .style("font", "20px 'stellar'")
-//         .style("fill", "black");
-
-//       var button2 = canvas.append("svg:image")
-//         .attr('x', 50)
-//         .attr('y', 830)
-//         .attr('width', 180)
-//         .attr('height', 90)
-//         .attr("xlink:href", "button.png");
-
-//             canvas.append("text")
-//               .attr("x", 80)//+30
-//               .attr("y", 885)
-//               .text("ADVERTISERS")
-//               .style("font", "25px 'stellar'")
-//               .style("fill", "black");
-
-//     	svg.on('click', function() {
-//   		//console.log("You clicked")
-// 		//pageLikes();
-// 		//loadingAds(); 
-
-
-
-
-// 		statement();
-// 		});
-
-//       });//end of api function 
-
-//     }//end of profile function
-
-// //==============================================================
 
 //SCREEN 3
 //==============================================================
