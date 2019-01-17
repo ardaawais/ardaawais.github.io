@@ -760,20 +760,22 @@ console.log(response.hometown);
 
 //next Y value needs to be *10 
 
-      canvas.append("text")
-        .attr("x", 50)
-        .attr("y", (yStart + (spacer*10)))
-        .text("YOUR GROUPS: ")
-        .style("font", "30px 'stellar'")
-        .style("fill", "black"); 
-        // .style("opacity", 0)
-        // .transition()
-        // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
-        // .duration(14000) //controls how fast is changes opacity
-        // .style("opacity", 1.0);
-
 
 //----- not accepted via fb review 
+
+      // canvas.append("text")
+      //   .attr("x", 50)
+      //   .attr("y", (yStart + (spacer*10)))
+      //   .text("YOUR GROUPS: ")
+      //   .style("font", "30px 'stellar'")
+      //   .style("fill", "black"); 
+      //   // .style("opacity", 0)
+      //   // .transition()
+      //   // .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+      //   // .duration(14000) //controls how fast is changes opacity
+      //   // .style("opacity", 1.0);
+
+
 // console.log(response.groups); 
 //         var groupInfo = response.groups;  
 //         var groupInfo2 = groupInfo.data; 
@@ -919,7 +921,7 @@ console.log(response.hometown);
 
         canvas.append("text")
         .attr("x", 50)
-        .attr("y", (yStart + (spacer*195)))//needs to calculate space that was taken up above
+        .attr("y", (yStart + (spacer*10)))//needs to calculate space that was taken up above
         .text("YOUR INFLUENCE: ")
         .style("font", "30px 'stellar'")
         .style("fill", "black"); 
@@ -932,7 +934,7 @@ console.log(response.hometown);
 
         canvas.append("text")
         .attr("x", 100)
-        .attr("y", (yStart + (spacer*195)) + 100)//needs to calculate space that was taken up above
+        .attr("y", (yStart + (spacer*10) + 100)//needs to calculate space that was taken up above
         .text("FRIEND COUNT: " + friendsInfo2.total_count)
         .style("font", "30px 'stellar'")
         .style("fill", "black"); 
