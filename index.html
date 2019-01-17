@@ -551,8 +551,7 @@ function fbLogout() {
 <fb:login-button
 	id="login" 
 	scope ="public_profile,user_birthday,user_gender,user_hometown,user_location,user_friends" 
-	onclick = "checkLoginState();"
-	onclick = "location.reload();" >
+	onclick = "statusChangeCallback();" >
 </fb:login-button>
 
 <button 
