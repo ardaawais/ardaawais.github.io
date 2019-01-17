@@ -166,6 +166,14 @@ banner();
       function checkLoginState() {
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
+                   if(response.status === 'connected'){
+           console.log('Logged in and authenticated');
+           setElements(true);
+           theProfile();
+         } else {
+           console.log('Not authenticated');
+           setElements(false);
+         }
         });
       }
 
