@@ -21,21 +21,6 @@
       	left:50px;
       }
 
-/*    .button {
-      background-color: #3b5998;
-      border: none;
-      color: white;
-      padding: 10px 100px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      position:absolute;
-      border-radius: 2px;
-    }*/
-
         .button2 {
       background-color: #3b5998;
       border: none;
@@ -557,27 +542,30 @@ function fbLogout() {
 //************************************************************
 // ========================= END =============================
 
-
-
 </script>
 
-
 <p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
+
 <div id = "status"></div>
 
 <fb:login-button
-id="login" 
-scope ="public_profile,user_birthday,user_gender,user_hometown,user_location,user_friends" 
-onclick = "checkLoginState();" >
+	id="login" 
+	scope ="public_profile,user_birthday,user_gender,user_hometown,user_location,user_friends" 
+	onclick = "checkLoginState();"
+	onclick = "location.reload();" >
 </fb:login-button>
 
-<!-- <button 
-	class = "button" 
-	id="login" 
-	onclick = "login()" 
-	>Login to Facebook
-</button> -->
-<button class = "button2"id="logout" onclick="fbLogout()">Logout</button> 
-<button class = "button3"id="next" onclick="endVis()">Continue</button> 
+<button 
+	class = "button2"
+	id="logout" 
+	onclick="fbLogout()">Logout
+</button> 
+
+<button 
+	class = "button3"
+	id="next" 
+	onclick="endVis()">Continue
+</button> 
+
 </body>
 </html> 
