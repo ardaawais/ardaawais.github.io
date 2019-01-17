@@ -163,17 +163,10 @@ banner();
            setElements(false);
          }
        }
+
       function checkLoginState() {
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
-                   if(response.status === 'connected'){
-           console.log('Logged in and authenticated');
-           setElements(true);
-           theProfile();
-         } else {
-           console.log('Not authenticated');
-           setElements(false);
-         }
         });
       }
 
@@ -430,8 +423,6 @@ function generalVis(){
 //SCREEN 2 
 //==============================================================
     function theProfile(){
-
-document.getElementById('login').style.visibility = 'none';
 
       var yStart = 260; 
       var spacer = 50;
