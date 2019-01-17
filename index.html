@@ -124,23 +124,6 @@ banner();
     	statusChangeCallback(response);
     });
 
-// FB.getLoginStatus(function(response) {
-// document.getElementById('logout').style.visibility = 'hidden';
-// 	if(response.status === 'connected'){
-// 		document.getElementById('status');
-// 	    theProfile(); //load the next page of the visulisation
-// 	    document.getElementById('login').style.visibility = 'hidden';
-// 	    document.getElementById('logout').style.visibility = 'visible';
-// 	    document.getElementById('Wtext').style.visibility = 'hidden';}
-// 		else if(response.status === 'not_authorized'){
-// 			document.getElementById('status').innerHTML = 'we are not logged in';
-//     }
-// 			else {
-// 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-//       }
-			
-// 		})
-
 };
 
 
@@ -167,6 +150,7 @@ banner();
       function checkLoginState() {
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
+          location.reload(); 
         });
       }
 
@@ -181,28 +165,6 @@ banner();
           document.getElementById('Wtext').style.display = 'block';
         }
       }
-
-//   function login(){
-// document.getElementById('logout').style.visibility = 'hidden';
-//   	FB.login(function (response) {
-//   			if(response.status === 'connected'){
-// 		document.getElementById('status');
-//     theProfile();
-//     document.getElementById('login').style.visibility = 'hidden';
-//     document.getElementById('logout').style.visibility = 'visible';
-//     document.getElementById('Wtext').style.visibility = 'hidden';}
-// 		else if(response.status === 'not_authorized'){
-// 			document.getElementById('status').innerHTML = 'we are not logged in';
-// 			    document.getElementById('login').style.visibility = 'visable';
-//     }
-// 			else {
-// 				document.getElementById('status').innerHTML = ' You are not logged into facebook';
-// 				    document.getElementById('login').style.visibility = 'visable';
-//       }
-
-//   	});
-//   }
-
 
 //SCREEN 1 
 //==============================================================
