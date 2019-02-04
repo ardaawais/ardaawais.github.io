@@ -580,18 +580,29 @@ var spaceT = 1;
       .style("fill", "black"); 
 
     canvas.append("text")
-      .attr("x", 55)
+      .attr("x", 60)
       .attr("y", 120)
       .text("Companies and Advertisers can also access your: " )
       .style("font", "15px 'stellar'")
       .style("fill", "white");
 
+  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'  ];
+
     var tSpace = 1; 
 
-    for (var j = 0; j < 6; j++) {
+    for (var j = 0; j < 4; j++) {
 
-  
-    }
+      canvas.append("text")
+        .attr("x", 60)
+        .attr("y", 120 + (10*tSpace))
+        .text(names[j])
+        .style("font", "15px 'stellar'")
+        .style("fill", "white");  
+
+        tSpace++;
+        
+    } //end of for loop
+
 
     var circle = canvas.append("circle")
       .attr("transform", function (d) {
