@@ -520,11 +520,11 @@ var spaceT = 1;
         .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
       .style("font", "10px 'stellar'")
       .style("fill", "black")
-      .opacity(0)
+      .style("opacity", 0)
       .transition()
       .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
       .duration(500) 
-      .opacity(1.0)
+      .style("opacity", 1.0); 
 
       spaceT++; 
 
