@@ -563,6 +563,13 @@ function page3(){
       .attr("height", 600)
       .style("fill", "black"); 
 
+    canvas.append("text")
+      .attr("x", 55)
+      .attr("y", 140)
+      .text("Companies and Advertisers can also access your: " )
+      .style("font", "30px 'stellar'")
+      .style("fill", "white");
+
     var circle = canvas.append("circle")
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 200 + ")";})
