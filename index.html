@@ -519,7 +519,12 @@ var spaceT = 1;
         .attr("y", 10*spaceT)
         .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
       .style("font", "10px 'stellar'")
-      .style("fill", "black");
+      .style("fill", "black")
+      .opacity(0)
+      .transition()
+      .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+      .duration(500) 
+      .opacity(1.0)
 
       spaceT++; 
 
@@ -568,16 +573,16 @@ var spaceT = 1;
     } //end of for loop
 
 
-    var circle = canvas.append("circle")
-      .attr("transform", function (d) {
-          return "translate(" + 500 + "," + 200 + ")";})
-      .attr("r", radius)
-      .style("fill", "black")
-      .transition()
-      .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-      .duration(500) //controls how fast is changes opacity
-      .attr("transform", function (d) {
-          return "translate(" + 500 + "," + 500 + ")";}); 
+    // var circle = canvas.append("circle")
+    //   .attr("transform", function (d) {
+    //       return "translate(" + 500 + "," + 200 + ")";})
+    //   .attr("r", radius)
+    //   .style("fill", "black")
+    //   .transition()
+    //   .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+    //   .duration(500) //controls how fast is changes opacity
+    //   .attr("transform", function (d) {
+    //       return "translate(" + 500 + "," + 500 + ")";}); 
 
 
 } //end of page3 function
