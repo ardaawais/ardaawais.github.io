@@ -182,6 +182,8 @@ banner();
 //==============================================================
 function adFact(){
 
+  document.getElementById('Ads').style.visibility = 'visible';
+
    document.getElementById('status').style.visibility = 'hidden';
     var rect = canvas.append("rect")
         .attr("x", 0)
@@ -325,6 +327,7 @@ function generalVis(){
     function theProfile(){
 
     document.getElementById('next2').style.visibility = 'hidden';
+    document.getElementById('Ads').style.visibility = 'hidden';
 
       var yStart = 260; 
       var spacer = 50;
@@ -490,6 +493,7 @@ console.log(response.hometown);
 function page3(){
 
   document.getElementById('next').style.visibility = 'hidden';
+  document.getElementById('Ads').style.visibility = 'hidden';
 
   document.getElementById('next2').style.visibility = 'visible';
 
@@ -528,7 +532,7 @@ var spaceT = 1;
       .attr("y", 80)
       .attr("width", 500)
       .attr("height", 600)
-      .style("fill", "white")
+      // .style("fill", "white")
       .style("stroke", "black");
 
 
@@ -544,9 +548,9 @@ var spaceT = 1;
       .attr("y", 120)
       .text("Companies and Advertisers can also access your: " )
       .style("font", "15px 'stellar'")
-      //.style("fill", "white");
+      .style("fill", "white");
 
-  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'  ];
+  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'];
 
     var tSpace = 2; 
 
@@ -588,6 +592,7 @@ function statement(){
 
 
   document.getElementById('next2').style.visibility = 'hidden';
+  document.getElementById('Ads').style.visibility = 'hidden';
 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -681,6 +686,12 @@ function fbLogout() {
   class = "button3"
   id="next2" 
   onclick="statement()">Continue
+</button> 
+
+<button 
+  class = "button3"
+  id="Ads" 
+  onclick="adFact()">Show me the money
 </button> 
 
 </body>
