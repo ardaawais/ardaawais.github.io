@@ -529,6 +529,35 @@ function endVis(){
 
 }// end of endVis function
 
+function page3(){
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
+  var radius = 50; 
+
+  document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 10300) //needs to be depended on data height of each person
+        .style("fill", "white");
+
+    var circle = canvas.append("circle")
+      .attr("x", 0)
+      .attr("y", 0)
+      .attr("width", radius)
+      .attr("height", radius)
+      .style("fill", "black")
+      .transition()
+      .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+      .duration(200) //controls how fast is changes opacity
+      .attr("x",500)
+      .attr("y", 500); 
+
+} //end of page3 function 
+
 
 function fbLogout() {
 
@@ -565,7 +594,7 @@ function fbLogout() {
 <button 
 	class = "button3"
 	id="next" 
-	onclick="endVis()">Continue
+	onclick="page3()">Continue
 </button> 
 
 </body>
