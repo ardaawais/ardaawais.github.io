@@ -535,7 +535,7 @@ var spaceT = 1;
     d3.selectAll("text")
     .style("opacity", 0)
     .transition()
-    .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+    .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
     .duration(200) //controls how fast is changes opacity
     .style("opacity", 1.0);
 
@@ -579,19 +579,6 @@ var spaceT = 1;
         tSpace++;
 
     } //end of for loop
-
-
-    // var circle = canvas.append("circle")
-    //   .attr("transform", function (d) {
-    //       return "translate(" + 500 + "," + 200 + ")";})
-    //   .attr("r", radius)
-    //   .style("fill", "black")
-    //   .transition()
-    //   .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-    //   .duration(500) //controls how fast is changes opacity
-    //   .attr("transform", function (d) {
-    //       return "translate(" + 500 + "," + 500 + ")";}); 
-
 
 } //end of page3 function
 
