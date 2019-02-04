@@ -176,57 +176,7 @@ banner();
     }// end of banner function 
 
 
-//SCREEN 3
-//==============================================================
 
-function statement(){
-
-	document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
-
-    	var text = canvas.append("text")
-			.attr("x",50)
-			.attr("y", 120)
-			.text("Facebook is free for it’s users because it makes money") //$7437 every minute 
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-		canvas.append("text")
-			.attr("x",50)
-			.attr("y", 240)
-			.text("from digital ad’s that use our data")
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-
-      var button4 = canvas.append("svg:image")
-        .attr('x', 30)
-        .attr('y', 300)
-        .attr('width', 300)
-        .attr('height', 90)
-        .attr("xlink:href", "button.png");
-
-            canvas.append("text")
-              .attr("x", 90)//+30
-              .attr("y", 355)//+55
-              .text("WHO ARE MY AD'S?")
-              .style("font", "25px 'stellar'")
-              .style("fill", "black");
-
-
-    	svg.on('click', function() {
-  		//console.log("You clicked")
-		pageLikes(); 
-		});
-
-}// end of statement function
-
-//============================================================== 
 
 //SCREEN 5
 //==============================================================
@@ -374,6 +324,8 @@ function generalVis(){
 //==============================================================
     function theProfile(){
 
+    document.getElementById('next2').style.visibility = 'hidden';
+
       var yStart = 260; 
       var spacer = 50;
      // var fontSize = 30; 
@@ -496,42 +448,49 @@ console.log(response.hometown);
 //SCREEN 6
 //==============================================================
 
-function endVis(){
+// function endVis(){
 
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
 
-	var fontS = 50; 
-	var spaceF = 50; 
-	var yP = 130; 
+// 	var fontS = 50; 
+// 	var spaceF = 50; 
+// 	var yP = 130; 
 
-	document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 10300) //needs to be depended on data height of each person
-        .style("fill", "white");
+// 	document.getElementById('status').style.visibility = 'hidden';
+//     var rect = canvas.append("rect")
+//         .attr("x", 0)
+//         .attr("y", 0)
+//         .attr("width", width)
+//         .attr("height", 10300) //needs to be depended on data height of each person
+//         .style("fill", "white");
 
-    var text = canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP)
-			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-			.style("font", "50px 'stellar'")
-			.style("fill", "black");
+//     var text = canvas.append("text")
+// 			.attr("x",30)
+// 			.attr("y", yP)
+// 			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+// 			.style("font", "50px 'stellar'")
+// 			.style("fill", "black");
 
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF))
-			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-			.style("font", "50px 'stellar'")
-			.style("fill", "black");
+//     	canvas.append("text")
+// 			.attr("x",30)
+// 			.attr("y", yP + (fontS + spaceF))
+// 			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+// 			.style("font", "50px 'stellar'")
+// 			.style("fill", "black");
 
-}// end of endVis function
+// }// end of endVis function
+
+//==============================================================  
+ 
+//----
+
+//==============================================================
 
 function page3(){
 
   document.getElementById('next').style.visibility = 'hidden';
+  document.getElementById('next2').style.visibility = 'hidden';
 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -588,19 +547,19 @@ var spaceT = 1;
 
   var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'  ];
 
-    var tSpace = 1; 
+    var tSpace = 2; 
 
     for (var j = 0; j < 4; j++) {
 
       canvas.append("text")
         .attr("x", 60)
-        .attr("y", 120 + (10*tSpace))
+        .attr("y", 120 + (10*tSpace) + 15)
         .text(names[j])
         .style("font", "15px 'stellar'")
         .style("fill", "white");  
 
         tSpace++;
-        
+
     } //end of for loop
 
 
@@ -616,8 +575,62 @@ var spaceT = 1;
           return "translate(" + 500 + "," + 500 + ")";}); 
 
 
-} //end of page3 function 
+} //end of page3 function
 
+//==============================================================  
+ 
+//----
+
+//==============================================================
+
+function statement(){
+
+  document.getElementById('status').style.visibility = 'hidden';
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
+      var text = canvas.append("text")
+      .attr("x",50)
+      .attr("y", 120)
+      .text("Facebook is free for it’s users because it makes money") //$7437 every minute 
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+    canvas.append("text")
+      .attr("x",50)
+      .attr("y", 240)
+      .text("from digital ad’s that use our data")
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+
+      var button4 = canvas.append("svg:image")
+        .attr('x', 30)
+        .attr('y', 300)
+        .attr('width', 300)
+        .attr('height', 90)
+        .attr("xlink:href", "button.png");
+
+            canvas.append("text")
+              .attr("x", 90)//+30
+              .attr("y", 355)//+55
+              .text("WHO ARE MY AD'S?")
+              .style("font", "25px 'stellar'")
+              .style("fill", "black");
+
+
+      svg.on('click', function() {
+      //console.log("You clicked")
+    pageLikes(); 
+    });
+
+}// end of statement function
+
+//============================================================== 
 
 function fbLogout() {
 
@@ -655,6 +668,12 @@ function fbLogout() {
 	class = "button3"
 	id="next" 
 	onclick="page3()">Continue
+</button> 
+
+<button 
+  class = "button3"
+  id="next2" 
+  onclick="statement()">Continue
 </button> 
 
 </body>
