@@ -555,12 +555,20 @@ function page3(){
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 500 + ")";}); 
 
-      var text = canvas.append("text")
+var spaceT = 1; 
+
+      for (var i = 0; i < 1000; i++) {
+
+        var text = canvas.append("text")
         .attr("x", 0)
-        .attr("y", 10)
+        .attr("y", 10*spaceT)
         .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
       .style("font", "10px 'stellar'")
       .style("fill", "black");
+
+      spaceT++; 
+
+      }
 
 } //end of page3 function 
 
