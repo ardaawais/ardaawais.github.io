@@ -176,74 +176,6 @@ banner();
     }// end of banner function 
 
 
-
-
-//SCREEN 5
-//==============================================================
-function adFact(){
-
-  document.getElementById('Ads').style.visibility = 'visible';
-  document.getElementById('status').style.visibility = 'hidden';
-  document.getElementById('endB').style.visibility = 'hidden'
-
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
-
-			var text = canvas.append("text")
-			.attr("x",50)
-			.attr("y", 120)
-			.text("FACEBOOK MAKES $22,311") //$7437 every minute 
-			.style("font", "80px 'stellar'")
-			.style("fill", "black");
-
-
-		canvas.append("text")
-			.attr("x",50)
-			.attr("y", 240)
-			.text("FROM DIGITAL AD'S")
-			.style("font", "80px 'stellar'")
-			.style("fill", "black");
-
-		canvas.append("text")
-			.attr("x",50)
-			.attr("y", 380)
-			.text("EVERY 3 MINUTES")
-			.style("font", "80px 'stellar'")
-			.style("fill", "black");
-
-
-		canvas.append("text")
-			.attr("x",50)
-			.attr("y", 500)
-			.text("But facebook is not the only digital platform")
-			.style("font", "50px 'stellar'")
-			.style("fill", "black");
-
-  	var button8 = canvas.append("svg:image")
-          .attr('x', -10)
-          .attr('y', 550)
-          .attr('width', 400)
-          .attr('height', 90)
-          .attr("xlink:href", "button.png");
-
-              canvas.append("text")
-                .attr("x", 105)//+30
-                .attr("y", 605)//+55
-                .text("WAIT, THERE'S MORE?!")
-                .style("font", "20px 'stellar'")
-                .style("fill", "black");
-
-      	svg.on('click', function() {
-    		//console.log("You clicked")
-  		generalVis(); 
-  		});
-
-}//end of adFact function 
-
 //==============================================================
 
 //************************************************************
@@ -378,44 +310,6 @@ console.log(response.hometown);
 
 //==============================================================
 
-//SCREEN 6
-//==============================================================
-
-// function endVis(){
-
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-
-// 	var fontS = 50; 
-// 	var spaceF = 50; 
-// 	var yP = 130; 
-
-// 	document.getElementById('status').style.visibility = 'hidden';
-//     var rect = canvas.append("rect")
-//         .attr("x", 0)
-//         .attr("y", 0)
-//         .attr("width", width)
-//         .attr("height", 10300) //needs to be depended on data height of each person
-//         .style("fill", "white");
-
-//     var text = canvas.append("text")
-// 			.attr("x",30)
-// 			.attr("y", yP)
-// 			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-// 			.style("font", "50px 'stellar'")
-// 			.style("fill", "black");
-
-//     	canvas.append("text")
-// 			.attr("x",30)
-// 			.attr("y", yP + (fontS + spaceF))
-// 			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-// 			.style("font", "50px 'stellar'")
-// 			.style("fill", "black");
-
-// }// end of endVis function
-
-//==============================================================  
- 
 //----
 
 //==============================================================
@@ -490,18 +384,18 @@ var spaceT = 1;
 
   var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'];
 
-    var tSpace = 2; 
+    var tSpace = 20; 
 
     for (var j = 0; j < 5; j++) {
 
       canvas.append("text")
         .attr("x", 60)
-        .attr("y", ((120 + (10*tSpace))+30))
+        .attr("y", 120 +(tSpace*10))
         .text(names[j])
         .style("font", "15px 'stellar'")
         .style("fill", "white");  
 
-        tSpace++;
+        tSpace+10;
 
     } //end of for loop
 
@@ -704,7 +598,7 @@ var rect = canvas.append("rect")
   .style("fill", "white");
 
 var text = canvas.append("text")
-  .attr("x", 530)
+  .attr("x", 80)
   .attr("y", 200)
   .text("OUR DATA")
   .style("font", "60px 'stellar'")
@@ -712,7 +606,7 @@ var text = canvas.append("text")
 
 for (var t = 0; t < 2000; t++) {
 canvas.append("text")
-  .attr("x", 500)
+  .attr("x", 50)
   .attr("y", 200)
   .text("Y")
   .style("font", "60px 'stellar'")
