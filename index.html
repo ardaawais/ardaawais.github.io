@@ -256,6 +256,7 @@ function adFact(){
     document.getElementById('next2').style.visibility = 'hidden';
     document.getElementById('Ads').style.visibility = 'hidden';
     document.getElementById('Vis').style.visibility = 'hidden';
+    document.getElementById('end').style.visibility = 'hidden';
 
       var yStart = 260; 
       var spacer = 50;
@@ -423,6 +424,7 @@ function page3(){
   document.getElementById('next').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'hidden';
   document.getElementById('Vis').style.visibility = 'hidden';
+  document.getElementById('end').style.visibility = 'hidden';
 
   document.getElementById('next2').style.visibility = 'visible';
 
@@ -516,6 +518,7 @@ function statement(){
   document.getElementById('next2').style.visibility = 'hidden';
   document.getElementById('Vis').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'visible';
+  document.getElementById('end').style.visibility = 'hidden';
 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -553,6 +556,7 @@ function fact(){
 
   document.getElementById('Vis').style.visibility = 'visible';
   document.getElementById('Ads').style.visibility = 'hidden';
+  document.getElementById('end').style.visibility = 'hidden';
 
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
@@ -611,6 +615,7 @@ function generalVis(){
   document.getElementById('next2').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'hidden';
   document.getElementById('Vis').style.visibility = 'hidden';
+  document.getElementById('end').style.visibility = 'visible';
 
 
     var rect = canvas.append("rect")
@@ -656,25 +661,58 @@ function generalVis(){
       .style("font", "20px 'stellar'")
       .style("fill", "black");
 
+      // canvas.append("text")
+      // .attr("x",30)
+      // .attr("y", yP + (fontS + spaceF)*5)
+      // .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+      // .style("font", "20px 'stellar'")
+      // .style("fill", "black");
 
-      canvas.append("text")
-      .attr("x",30)
-      .attr("y", yP + (fontS + spaceF)*5)
-      .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-      .style("font", "20px 'stellar'")
-      .style("fill", "black");
-
-      canvas.append("text")
-      .attr("x",30)
-      .attr("y", yP + ((fontS + spaceF)*5) + (20 + spaceF))
-      .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-      .style("font", "20px 'stellar'")
-      .style("fill", "black");
+      // canvas.append("text")
+      // .attr("x",30)
+      // .attr("y", yP + ((fontS + spaceF)*5) + (20 + spaceF))
+      // .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+      // .style("font", "20px 'stellar'")
+      // .style("fill", "black");
 
 }// end of GeneralVis function
 
 //==============================================================
 
+
+function end(){
+
+  document.getElementById('status').style.visibility = 'hidden';
+  document.getElementById('next2').style.visibility = 'hidden';
+  document.getElementById('Ads').style.visibility = 'hidden';
+  document.getElementById('Vis').style.visibility = 'hidden';
+  document.getElementById('end').style.visibility = 'hidden';
+
+
+var rect = canvas.append("rect")
+  .attr("x", 0)
+  .attr("y", 0)
+  .attr("width", width)
+  .attr("height", 1000)
+  .style("fill", "white");
+
+var text = canvas.append("text")
+  .attr("x", 580)
+  .attr("y", 500)
+  .text("OUR DATA")
+  .style("font", "60px 'stellar'")
+  .style("fill", "black");
+
+
+canvas.append("text")
+  .attr("x", 500)
+  .attr("y", 500)
+  .text("Y")
+  .style("font", "60px 'stellar'")
+  .style("fill", "black");
+
+
+}
 
 function fbLogout() {
 
@@ -732,6 +770,12 @@ function fbLogout() {
   class = "button3"
   id="Vis" 
   onclick=" generalVis()">Wait, there's more? 
+</button> 
+
+<button 
+  class = "button3"
+  id="endB" 
+  onclick=" end()">Continue 
 </button> 
 
 </body>
