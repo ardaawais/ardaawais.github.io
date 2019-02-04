@@ -710,13 +710,22 @@ var text = canvas.append("text")
   .style("font", "60px 'stellar'")
   .style("fill", "black");
 
-
+for (var t = 0; t < 2000; t++) {
 canvas.append("text")
   .attr("x", 500)
   .attr("y", 200)
   .text("Y")
   .style("font", "60px 'stellar'")
-  .style("fill", "black");
+  .style("fill", "black")
+  .style("opacity", 0)
+  .transition()
+  .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+  .duration(200) //controls how fast is changes opacity
+  .style("opacity", 1.0)
+  .remove(); 
+
+}
+
 
 
 }
