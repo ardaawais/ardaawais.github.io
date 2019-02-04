@@ -625,26 +625,45 @@ var text = canvas.append("text")
   .style("fill", "black");
 
 
-var Ytext = canvas.append("text")
-  .attr("x", 50)
-  .attr("y", 200)
-  .text("Y")
-  .style("font", "60px 'stellar'")
-  .style("fill", "black")
+// var Ytext = canvas.append("text")
+//   .attr("x", 50)
+//   .attr("y", 200)
+//   .text("Y")
+//   .style("font", "60px 'stellar'")
+//   .style("fill", "black")
+
+// for (var t = 0; t < 2000; t++) {
+
+//     d3.selectAll("Ytext")
+//     .style("opacity", 0)
+//     .transition()
+//     .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+//     .duration(200*t) //controls how fast is changes opacity
+//     .style("opacity", 1.0)
+//     .remove()
+
+
+// }// end of for loop
+
+
 
 for (var t = 0; t < 2000; t++) {
 
-    d3.selectAll("Ytext")
+  canvas.append("text")
+    .attr("x", 50)
+    .attr("y", 200)
+    .text("Y")
+    .style("font", "60px 'stellar'")
+    .style("fill", "black")
     .style("opacity", 0)
     .transition()
     .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
     .duration(200*t) //controls how fast is changes opacity
     .style("opacity", 1.0)
-    .remove()
+    .on("end", repeat); 
 
 
-
-}
+}// end of for loop
 
 
 } //end of the function
