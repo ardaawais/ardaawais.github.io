@@ -546,12 +546,6 @@ function page3(){
         .attr("height", 10300) //needs to be depended on data height of each person
         .style("fill", "white");
 
-    canvas.append("rect")
-      .attr("x", 50)
-      .attr("y", 100)
-      .attr("width", 500)
-      .attr("height", 600)
-      .style("fill", "black"); 
 
     canvas.append("rect")
       .attr("x", 70)
@@ -559,7 +553,15 @@ function page3(){
       .attr("width", 500)
       .attr("height", 600)
       .style("fill", "white")
-      .style("stroke", "steelBlue"); 
+      .style("stroke", "black");
+
+
+    canvas.append("rect")
+      .attr("x", 50)
+      .attr("y", 100)
+      .attr("width", 500)
+      .attr("height", 600)
+      .style("fill", "black"); 
 
     var circle = canvas.append("circle")
       .attr("transform", function (d) {
