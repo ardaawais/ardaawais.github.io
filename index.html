@@ -245,79 +245,6 @@ function adFact(){
 
 //==============================================================
 
-//SCREEN 6
-//==============================================================
-
-function generalVis(){
-
-	var fontS = 40; 
-	var spaceF = 30; 
-	var yP = 80; 
-
-	document.getElementById('status').style.visibility = 'hidden';
-    var rect = canvas.append("rect")
-        .attr("x", 0)
-        .attr("y", 0)
-        .attr("width", width)
-        .attr("height", 1000)
-        .style("fill", "white");
-
-    	var text = canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP)
-			.text("FACEBOOK: ") //$7437 every minute 
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF))
-			.text("TWITTER: ") //$7437 every minute 
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF)*2)
-			.text("YOUTUBE: ") //$7437 every minute 
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF)*3)
-			.text("REDDIT: ") //$7437 every minute 
-			.style("font", "40px 'stellar'")
-			.style("fill", "black");
-
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF)*4)
-			.text("Just to give a few examples") //$7437 every minute 
-			.style("font", "20px 'stellar'")
-			.style("fill", "black");
-
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + (fontS + spaceF)*5)
-			.text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-			.style("font", "20px 'stellar'")
-			.style("fill", "black");
-
-    	canvas.append("text")
-			.attr("x",30)
-			.attr("y", yP + ((fontS + spaceF)*5) + (20 + spaceF))
-			.text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-			.style("font", "20px 'stellar'")
-			.style("fill", "black");
-
-}// end of GeneralVis function
-
-//==============================================================
-
-
 //************************************************************
 // ============= SCREENS FOR FACEBOOK REVIEW =================
 //************************************************************
@@ -328,6 +255,7 @@ function generalVis(){
 
     document.getElementById('next2').style.visibility = 'hidden';
     document.getElementById('Ads').style.visibility = 'hidden';
+    document.getElementById('Vis').style.visibility = 'hidden';
 
       var yStart = 260; 
       var spacer = 50;
@@ -494,6 +422,7 @@ function page3(){
 
   document.getElementById('next').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'hidden';
+  document.getElementById('Vis').style.visibility = 'hidden';
 
   document.getElementById('next2').style.visibility = 'visible';
 
@@ -592,6 +521,7 @@ function statement(){
 
 
   document.getElementById('next2').style.visibility = 'hidden';
+  document.getElementById('Vis').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'visible';
 
   document.body.scrollTop = 0;
@@ -671,6 +601,84 @@ document.documentElement.scrollTop = 0;
 
 //============================================================== 
 
+//
+
+//==============================================================
+
+function generalVis(){
+
+  var fontS = 40; 
+  var spaceF = 30; 
+  var yP = 80; 
+
+  document.getElementById('status').style.visibility = 'hidden';
+  document.getElementById('next2').style.visibility = 'hidden';
+  document.getElementById('Ads').style.visibility = 'hidden';
+  document.getElementById('Vis').style.visibility = 'visible';
+
+
+    var rect = canvas.append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", width)
+        .attr("height", 1000)
+        .style("fill", "white");
+
+      var text = canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP)
+      .text("FACEBOOK: ") //$7437 every minute 
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + (fontS + spaceF))
+      .text("TWITTER: ") //$7437 every minute 
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + (fontS + spaceF)*2)
+      .text("YOUTUBE: ") //$7437 every minute 
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + (fontS + spaceF)*3)
+      .text("REDDIT: ") //$7437 every minute 
+      .style("font", "40px 'stellar'")
+      .style("fill", "black");
+
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + (fontS + spaceF)*4)
+      .text("Just to give a few examples") //$7437 every minute 
+      .style("font", "20px 'stellar'")
+      .style("fill", "black");
+
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + (fontS + spaceF)*5)
+      .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+      .style("font", "20px 'stellar'")
+      .style("fill", "black");
+
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", yP + ((fontS + spaceF)*5) + (20 + spaceF))
+      .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+      .style("font", "20px 'stellar'")
+      .style("fill", "black");
+
+}// end of GeneralVis function
+
+//==============================================================
+
 
 function fbLogout() {
 
@@ -722,6 +730,12 @@ function fbLogout() {
   class = "button3"
   id="Ads" 
   onclick="fact()">Show me the money
+</button> 
+
+<button 
+  class = "button3"
+  id="Vis" 
+  onclick=" generalVis()">Wait, there's more? 
 </button> 
 
 </body>
