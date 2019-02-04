@@ -610,7 +610,7 @@ function generalVis(){
 
   var fontS = 40; 
   var spaceF = 30; 
-  var yP = 80; 
+  var yP = 120; 
 
   document.getElementById('status').style.visibility = 'hidden';
   document.getElementById('next2').style.visibility = 'hidden';
@@ -626,7 +626,13 @@ function generalVis(){
         .attr("height", 1000)
         .style("fill", "white");
 
-      var text = canvas.append("text")
+
+  var text = canvas.append("text")
+    .attr("x", 30)
+    .attr("y", 80)
+    .text("BUT FACEBOOK IS NOT THE ONLY DIGITAL PLATFORM...")
+
+    canvas.append("text")
       .attr("x",30)
       .attr("y", yP)
       .text("FACEBOOK: ") //$7437 every minute 
