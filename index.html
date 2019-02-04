@@ -532,7 +532,7 @@ var spaceT = 1;
       .attr("y", 80)
       .attr("width", 500)
       .attr("height", 600)
-      // .style("fill", "white")
+      .style("fill", "white")
       .style("stroke", "black");
 
 
@@ -592,7 +592,7 @@ function statement(){
 
 
   document.getElementById('next2').style.visibility = 'hidden';
-  document.getElementById('Ads').style.visibility = 'hidden';
+  document.getElementById('Ads').style.visibility = 'visible';
 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
@@ -630,8 +630,6 @@ function fact(){
 
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
-
-document.getElementById('Ads').style.visibility = 'visible';
 
     var rect = canvas.append("rect")
         .attr("x", 0)
