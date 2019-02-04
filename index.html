@@ -544,14 +544,6 @@ function page3(){
         .attr("height", 10300) //needs to be depended on data height of each person
         .style("fill", "white");
 
-   
-  canvas.append("rect")
-      .attr("x", 50)
-      .attr("y", 100)
-      .attr("width", 200)
-      .attr("height" 1000)
-      .style("fill", "black")
-
     var circle = canvas.append("circle")
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 200 + ")";})
@@ -559,7 +551,7 @@ function page3(){
       .style("fill", "black")
       .transition()
       .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-      .duration(1000) //controls how fast is changes opacity
+      .duration(500) //controls how fast is changes opacity
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 500 + ")";}); 
 
@@ -575,6 +567,7 @@ var spaceT = 1;
       .style("fill", "black");
 
       spaceT++; 
+
 
       }
 
