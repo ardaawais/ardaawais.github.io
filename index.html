@@ -514,22 +514,30 @@ var spaceT = 1;
 
       for (var i = 0; i < 1000; i++) {
 
-        var text = canvas.append("text")
+        var text1 = canvas.append("text")
         .attr("x", 0)
         .attr("y", 10*spaceT)
         .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
       .style("font", "10px 'stellar'")
-      .style("fill", "black")
-      .style("opacity", 0)
-      .transition()
-      .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-      .duration(2000) 
-      .style("opacity", 1.0); 
+      .style("fill", "black"); 
+      // .style("opacity", 0)
+      // .transition()
+      // .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
+      // .duration(2000) 
+      // .style("opacity", 1.0); 
 
       spaceT++; 
 
 
       }; //end of for loop
+
+
+    d3.selectAll("text")
+    .style("opacity", 0)
+    .transition()
+    .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
+    .duration(200) //controls how fast is changes opacity
+    .style("opacity", 1.0);
 
 
     canvas.append("rect")
