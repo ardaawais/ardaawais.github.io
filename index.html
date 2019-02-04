@@ -547,8 +547,7 @@ function page3(){
     var circle = canvas.append("circle")
       .attr("x", 0)
       .attr("y", 0)
-      .attr("width", radius)
-      .attr("height", radius)
+      .attr("r", radius)
       .style("fill", "black")
       .transition()
       .delay(function(d,i){ return 400*i; }) //controls how many come on the screen
