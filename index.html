@@ -183,8 +183,9 @@ banner();
 function adFact(){
 
   document.getElementById('Ads').style.visibility = 'visible';
+  document.getElementById('status').style.visibility = 'hidden';
+  document.getElementById('endB').style.visibility = 'hidden'
 
-   document.getElementById('status').style.visibility = 'hidden';
     var rect = canvas.append("rect")
         .attr("x", 0)
         .attr("y", 0)
@@ -256,7 +257,7 @@ function adFact(){
     document.getElementById('next2').style.visibility = 'hidden';
     document.getElementById('Ads').style.visibility = 'hidden';
     document.getElementById('Vis').style.visibility = 'hidden';
-    document.getElementById('end').style.visibility = 'hidden';
+    document.getElementById('endB').style.visibility = 'hidden';
 
       var yStart = 260; 
       var spacer = 50;
