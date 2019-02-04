@@ -546,6 +546,22 @@ function page3(){
         .attr("height", 10300) //needs to be depended on data height of each person
         .style("fill", "white");
 
+var spaceT = 1; 
+
+      for (var i = 0; i < 1000; i++) {
+
+        var text = canvas.append("text")
+        .attr("x", 0)
+        .attr("y", 10*spaceT)
+        .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
+      .style("font", "10px 'stellar'")
+      .style("fill", "black");
+
+      spaceT++; 
+
+
+      }; //end of for loop
+
 
     canvas.append("rect")
       .attr("x", 70)
@@ -570,6 +586,13 @@ function page3(){
       .style("font", "15px 'stellar'")
       .style("fill", "white");
 
+    var tSpace = 1; 
+
+    for (var j = 0; j < 6; j++) {
+
+  
+    }
+
     var circle = canvas.append("circle")
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 200 + ")";})
@@ -581,21 +604,6 @@ function page3(){
       .attr("transform", function (d) {
           return "translate(" + 500 + "," + 500 + ")";}); 
 
-var spaceT = 1; 
-
-      for (var i = 0; i < 1000; i++) {
-
-        var text = canvas.append("text")
-        .attr("x", 0)
-        .attr("y", 10*spaceT)
-        .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
-      .style("font", "10px 'stellar'")
-      .style("fill", "black");
-
-      spaceT++; 
-
-
-      }
 
 } //end of page3 function 
 
