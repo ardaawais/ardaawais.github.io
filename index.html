@@ -449,15 +449,8 @@ var spaceT = 1;
         .text("YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED,YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED, YOU'VE BEEN PROCESSED")
       .style("font", "10px 'stellar'")
       .style("fill", "black"); 
-      // .style("opacity", 0)
-      // .transition()
-      // .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-      // .duration(2000) 
-      // .style("opacity", 1.0); 
 
       spaceT++; 
-
-
       }; //end of for loop
 
 
@@ -558,6 +551,9 @@ function statement(){
   
 function fact(){
 
+  document.getElementById('Vis').style.visibility = 'visible';
+  document.getElementById('Ads').style.visibility = 'visible';
+
 document.body.scrollTop = 0;
 document.documentElement.scrollTop = 0;
 
@@ -614,7 +610,7 @@ function generalVis(){
   document.getElementById('status').style.visibility = 'hidden';
   document.getElementById('next2').style.visibility = 'hidden';
   document.getElementById('Ads').style.visibility = 'hidden';
-  document.getElementById('Vis').style.visibility = 'visible';
+  document.getElementById('Vis').style.visibility = 'hidden';
 
 
     var rect = canvas.append("rect")
