@@ -539,7 +539,7 @@ var spaceT = 1;
       .attr("height", 600)
       .style("fill", "black"); 
 
-    canvas.append("text")
+    var text = canvas.append("text")
       .attr("x", 60)
       .attr("y", 120)
       .text("Companies and Advertisers can also access your: " )
@@ -554,7 +554,7 @@ var spaceT = 1;
 
       canvas.append("text")
         .attr("x", 60)
-        .attr("y", 120 + (10*tSpace) + 30)
+        .attr("y", (120 + 30) + (10*tSpace))
         .text(names[j])
         .style("font", "15px 'stellar'")
         .style("fill", "white");  
@@ -586,7 +586,7 @@ var spaceT = 1;
 
 function statement(){
 
-  
+
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
