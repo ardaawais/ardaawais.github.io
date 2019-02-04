@@ -545,15 +545,15 @@ function page3(){
         .style("fill", "white");
 
     var circle = canvas.append("circle")
-      .attr("x", 500)
-      .attr("y", 200)
+      .attr("transform", function (d) {
+          return "translate(" + 500 + "," + 200 + ")";})
       .attr("r", radius)
       .style("fill", "black")
       .transition()
       .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
       .duration(200) //controls how fast is changes opacity
-      .attr("x",500)
-      .attr("y", 500); 
+      .attr("transform", function (d) {
+          return "translate(" + 500 + "," + 500 + ")";}); 
 
 } //end of page3 function 
 
