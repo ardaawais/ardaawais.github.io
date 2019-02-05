@@ -681,7 +681,7 @@ function repeat()
     .style("opacity", 0)
     .transition()
     .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-    .duration(200*t) //controls how fast is changes opacity
+    .duration(200) //controls how fast is changes opacity
     .style("opacity", 1.0)
     .remove()
     .on("end", repeat); 
