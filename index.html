@@ -536,6 +536,10 @@ document.documentElement.scrollTop = 0;
 
 function generalVis(){
 
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+
+
   var fontS = 40; 
   var spaceF = 30; 
   var yP = 200; 
@@ -616,6 +620,9 @@ function generalVis(){
 
 
 function end(){
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 
   document.getElementById('status').style.visibility = 'hidden';
   document.getElementById('next2').style.visibility = 'hidden';
