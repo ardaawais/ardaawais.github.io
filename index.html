@@ -512,6 +512,12 @@ document.documentElement.scrollTop = 0;
       .style("font", "80px 'stellar'")
       .style("fill", "white");
 
+    canvas.append("rect")
+      .attr("x", 0)
+      .attr("y", height - 100)
+      .attr("width", width)
+      .attr("height", 100)
+      .style("fill", "white"); 
 
 
     var newText = canvas.append("text")
@@ -522,7 +528,7 @@ document.documentElement.scrollTop = 0;
       .style("opacity", 0)
       .transition()
       .delay(function(d,i){ return 700*i; }) //controls how many come on the screen
-      .duration(6000) //controls how fast is changes opacity
+      .duration(2000) //controls how fast is changes opacity
       .style("opacity", 1.0)
       .style("fill", "white"); 
 
