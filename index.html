@@ -672,7 +672,27 @@ var text = canvas.append("text")
 
 // }// end of for loop
 
-repeat();
+
+  var Ytext = canvas.append("text")
+    .attr("x", 50)
+    .attr("y", 200)
+    .text("Y")
+    .style("font", "60px 'stellar'")
+    .style("fill", "black")
+      repeat();
+
+
+    function repeat() {
+      Ytext
+        .style("opacity", 0)
+        .transition()        // apply a transition
+        .duration(2000)      // apply it over 2000 milliseconds
+        .style("opacity", 1.0)
+        .transition()        // apply a transition
+        .duration(2000)      // apply it over 2000 milliseconds
+        .style("opacity, 0")
+        .on("end", repeat);  // when the transition finishes start again
+    };
 
 
 
@@ -697,25 +717,8 @@ repeat();
 
 } //end of the function
 
-function repeat()
-{
-   var text = canvas.append("text")
-    .attr("x", 50)
-    .attr("y", 200)
-    .text("Y")
-    .style("font", "60px 'stellar'")
-    .style("fill", "black")
-    .style("opacity", 0)
-    .transition()
-    .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-    .duration(200) //controls how fast is changes opacity
-    .style("opacity", 1.0)
-    .transition()
-    .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-    .duration(200) //controls how fast is changes opacity
-    .style("opacity", 0)
-    .on("end", repeat); 
-}
+
+
 function fbLogout() {
 
         FB.logout(function (response) {
