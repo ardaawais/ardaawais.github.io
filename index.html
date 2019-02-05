@@ -73,8 +73,27 @@
       border-radius: 2px;
       top: 500px; 
 
+    }
+
+
+            .button5 {
+      background-color: #FFFFFF;
+      border: none;
+      color: white;
+      padding: 10px 60px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position:absolute;
+      border-radius: 2px;
+      top: 930px; 
+
 
     }
+
 
 
 
@@ -512,13 +531,6 @@ document.documentElement.scrollTop = 0;
       .style("font", "80px 'stellar'")
       .style("fill", "white");
 
-    canvas.append("rect")
-      .attr("x", 0)
-      .attr("y", height - 20)
-      .attr("width", width)
-      .attr("height", 100)
-      .style("fill", "white"); 
-
 
     var newText = canvas.append("text")
       .attr("x",50)
@@ -772,7 +784,7 @@ function fbLogout() {
 </button> 
 
 <button 
-  class = "button4"
+  class = "button5"
   id="Vis" 
   onclick=" generalVis()">Wait, there's more? 
 </button> 
