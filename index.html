@@ -717,6 +717,15 @@ function fbLogout() {
             //Do what ever you want here when logged out like reloading the page
             //window.location.reload();
             setElements(false);
+
+            var rect = canvas.append("rect")
+              .attr("x", 0)
+              .attr("y", 0)
+              .attr("width", width)
+              .attr("height", 1000)
+              .style("fill", "white");
+
+              banner(); 
         });
     }
 
