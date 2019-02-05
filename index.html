@@ -97,6 +97,27 @@
 
 
 
+            .button6 {
+      background-color: #000000;
+      border: none;
+      color: white;
+      padding: 10px 60px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      position:absolute;
+      border-radius: 2px;
+      top: 700px;
+      left: 50px; 
+
+
+    }
+
+
+
 
     .img{
       position:absolute;
@@ -603,6 +624,8 @@ function generalVis(){
     .attr("x", 30)
     .attr("y", 65)
     .text("FACEBOOK IS NOT THE ONLY PLATFORM THAT MAKES MONEY FROM OUR DATA...")
+     .style("font", "20px 'stellar'")
+      .style("fill", "black");
 
     canvas.append("text")
       .attr("x",30)
@@ -773,7 +796,7 @@ function fbLogout() {
 <button 
   class = "button4"
   id="Ads" 
-  onclick="fact()">Show me the money
+  onclick="fact()">How much money tho?
 </button> 
 
 <button 
@@ -783,7 +806,7 @@ function fbLogout() {
 </button> 
 
 <button 
-  class = "button3"
+  class = "button6"
   id="endB" 
   onclick=" end()">Continue 
 </button> 
