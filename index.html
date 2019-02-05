@@ -391,21 +391,21 @@ var spaceT = 1;
       .attr("x", 50)
       .attr("y", 240)
       .attr("width", 500)
-      .attr("height", 300)
+      .attr("height", 700)
       .style("fill", "black"); 
 
     var text = canvas.append("text")
       .attr("x", 60)
-      .attr("y", 280)
+      .attr("y", 700)
       .text("Companies and Advertisers can also access your: " )
       .style("font", "15px 'stellar'")
       .style("fill", "white");
 
-  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations', '- Your current location (remember when you allowed gps access)'];
+  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations','- Your current location (remember when you allowed gps access)'];
 
     var tSpace = 20; 
 
-    for (var j = 0; j < 5; j++) {
+    for (var j = 0; j < 6; j++) {
 
       canvas.append("text")
         .attr("x", 60)
@@ -418,6 +418,20 @@ var spaceT = 1;
         tSpace = tSpace + 2; 
 
     } //end of for loop
+
+    canvas.append("text")
+      .attr("x",60)
+      .attr("y", 420)
+      .text("We wanted to show you all of this!")
+      .style("font", "15px 'stellar'")
+      .style("fill", "white"); 
+
+    canvas.append("text")
+      .attr("x",60)
+      .attr("y", 440)
+      .text("But facebook rejected our request because we are not a real verified company …")
+      .style("font", "15px 'stellar'")
+      .style("fill", "white"); 
 
 } //end of page3 function
 
