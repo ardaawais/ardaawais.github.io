@@ -140,6 +140,7 @@ banner();
   window.fbAsyncInit = function() {
     FB.init({
       appId            : '343061712934729',
+      // cookie           : true, 
       autoLogAppEvents : true,
       xfbml            : true,
       version          : 'v3.1'
@@ -174,7 +175,7 @@ banner();
        }
 
       function checkLoginState() {
-      	location.reload(); 
+      	//location.reload(); 
         FB.getLoginStatus(function(response) {
           statusChangeCallback(response);
         });
@@ -735,7 +736,7 @@ function fbLogout() {
 <fb:login-button
 	id="login" 
 	scope ="public_profile,user_birthday,user_gender,user_hometown,user_location,user_friends" 
-	onclick = "statusChangeCallback();" >
+	onlogin = "checkLoginState();" >
 </fb:login-button>
 
 <button 
