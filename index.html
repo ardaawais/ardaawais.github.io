@@ -79,7 +79,7 @@
             .button5 {
       background-color: #FFFFFF;
       border: none;
-      color: white;
+      color: black;
       padding: 10px 60px;
       text-align: center;
       text-decoration: none;
@@ -702,7 +702,7 @@ var text = canvas.append("text")
         .style("opacity", 1.0)
         .transition()        // apply a transition
         .duration(2000)      // apply it over 2000 milliseconds
-        .style("opacity, 0")
+        .style("opacity", 0)
         .on("end", repeat);  // when the transition finishes start again
     };
 
