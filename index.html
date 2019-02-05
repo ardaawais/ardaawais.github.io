@@ -437,11 +437,11 @@ var spaceT = 1;
     var text = canvas.append("text")
       .attr("x", 60)
       .attr("y", 280)
-      .text("Companies and Advertisers can also access your: " )
+      .text("Verified businesses (registered at Company House) have access to the following information and more: " )
       .style("font", "15px 'stellar'")
       .style("fill", "white");
 
-  var names = [ '- Likes',  '- Groups (even private ones)','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations','- Your current location (remember when you allowed gps access)'];
+  var names = [ '- Likes',  '- Groups','- Friend lists','- External websites that you redirected to from facebook', '- Tagged Locations','- Your current location (turning off location services is such a pain right?)'];
 
     var tSpace = 20; 
 
@@ -462,16 +462,16 @@ var spaceT = 1;
     canvas.append("text")
       .attr("x",60)
       .attr("y", 520)
-      .text("We wanted to show you all of this!")
+      .text("Before March 2018 we could have showed you all this data too...")
       .style("font", "15px 'stellar'")
       .style("fill", "white"); 
 
-    canvas.append("text")
-      .attr("x",60)
-      .attr("y", 550)
-      .text("But facebook rejected our request because we are not a real verified company …")
-      .style("font", "15px 'stellar'")
-      .style("fill", "white"); 
+    // canvas.append("text")
+    //   .attr("x",60)
+    //   .attr("y", 550)
+    //   .text("But facebook rejected our request because we are not a real verified company …")
+    //   .style("font", "15px 'stellar'")
+    //   .style("fill", "white"); 
 
 } //end of page3 function
 
@@ -503,14 +503,14 @@ function statement(){
       var text = canvas.append("text")
       .attr("x",50)
       .attr("y", 120)
-      .text("FACEBOOK IS FREE FOR ITS USERS BECAUSE IT MAKES MONEY") //$7437 every minute 
+      .text("FACEBOOK IS FREE...") //$7437 every minute 
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
     canvas.append("text")
       .attr("x",50)
       .attr("y", 240)
-      .text("FROM DIGITAL AD'S THAT USE OUR DATA")
+      .text("BECAUSE WE PAY FOR IT WITH OUR DATA")
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
@@ -540,7 +540,7 @@ document.documentElement.scrollTop = 0;
     var text = canvas.append("text")
       .attr("x",50)
       .attr("y", 120)
-      .text("FACEBOOK MAKES $22,311")
+      .text("FACEBOOK MAKES £17,112")
       .style("font", "80px 'stellar'")
       .style("fill", "white");
 
@@ -601,43 +601,42 @@ function generalVis(){
   var text = canvas.append("text")
     .attr("x", 30)
     .attr("y", 65)
-    .text("BUT FACEBOOK IS NOT THE ONLY DIGITAL PLATFORM...")
+    .text("FACEBOOK IS NOT THE ONLY PLATFORM THAT MAKES MONEY FROM OUR DATA...")
 
     canvas.append("text")
       .attr("x",30)
       .attr("y", yP)
-      .text("FACEBOOK: ") //$7437 every minute 
+      .text("SNAPCHAT: £625 MILLION (a year) ") //$7437 every minute 
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
       canvas.append("text")
       .attr("x",30)
       .attr("y", yP + (fontS + spaceF))
-      .text("TWITTER: ") //$7437 every minute 
+      .text("TWITTER: £561 MILLION (a year) ") //$7437 every minute 
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
       canvas.append("text")
       .attr("x",30)
       .attr("y", yP + (fontS + spaceF)*2)
-      .text("YOUTUBE: ") //$7437 every minute 
+      .text("23 AND ME: £48 MILLION A YEAR (a year) ") //$7437 every minute 
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
       canvas.append("text")
       .attr("x",30)
       .attr("y", yP + (fontS + spaceF)*3)
-      .text("REDDIT: ") //$7437 every minute 
+      .text("GOOGLE: £45 MILLION (A DAY) ") //$7437 every minute 
       .style("font", "40px 'stellar'")
       .style("fill", "black");
 
-
-      canvas.append("text")
-      .attr("x",30)
-      .attr("y", yP + (fontS + spaceF)*4)
-      .text("Just to give a few examples") //$7437 every minute 
-      .style("font", "20px 'stellar'")
-      .style("fill", "black");
+      // canvas.append("text")
+      // .attr("x",30)
+      // .attr("y", yP + (fontS + spaceF)*4)
+      // .text("Just to give a few examples") //$7437 every minute 
+      // .style("font", "20px 'stellar'")
+      // .style("fill", "black");
 
 
 }// end of GeneralVis function
@@ -696,14 +695,14 @@ var text = canvas.append("text")
       canvas.append("text")
       .attr("x",50)
       .attr("y", 300)
-      .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+      .text("SO, WHO'S DATA IS IT REALLY?") 
       .style("font", "20px 'stellar'")
       .style("fill", "black");
 
       canvas.append("text")
       .attr("x",50)
       .attr("y", 330)
-      .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+      .text("THANKS FOR EXPLORING YOUR DATA WITH IDENTITY 2.0") 
       .style("font", "20px 'stellar'")
       .style("fill", "black");
 
@@ -742,7 +741,7 @@ function fbLogout() {
 
 </script>
 
-<p id="Wtext"> Welcome to the exhibition Identity 2.0. By logging into Facebook you give us premission to use your data to generate visulisations. These visulisations will help you explore your digital Identity! </p>
+<p id="Wtext"> Welcome to the Identity 2.0. By logging into our site, you are giving Facebook permission to share your data with us. We won’t sell it, store it or use it to predict your voting patterns. Pinky promise.</p>
 
 <div id = "status"></div>
 
