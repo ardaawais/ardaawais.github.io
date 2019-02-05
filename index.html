@@ -36,7 +36,7 @@
       position:absolute;
       border-radius: 2px;
       top:200px;
-      left:800px;
+      left:1000px;
     }
 
 
@@ -715,7 +715,8 @@ function fbLogout() {
 
         FB.logout(function (response) {
             //Do what ever you want here when logged out like reloading the page
-            window.location.reload();
+            //window.location.reload();
+            setElements(false);
         });
     }
 
