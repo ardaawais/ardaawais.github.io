@@ -618,19 +618,6 @@ function generalVis(){
       .style("font", "20px 'stellar'")
       .style("fill", "black");
 
-      // canvas.append("text")
-      // .attr("x",30)
-      // .attr("y", yP + (fontS + spaceF)*5)
-      // .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
-      // .style("font", "20px 'stellar'")
-      // .style("fill", "black");
-
-      // canvas.append("text")
-      // .attr("x",30)
-      // .attr("y", yP + ((fontS + spaceF)*5) + (20 + spaceF))
-      // .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
-      // .style("font", "20px 'stellar'")
-      // .style("fill", "black");
 
 }// end of GeneralVis function
 
@@ -663,28 +650,6 @@ var text = canvas.append("text")
   .style("font", "60px 'stellar'")
   .style("fill", "black");
 
-
-// var Ytext = canvas.append("text")
-//   .attr("x", 50)
-//   .attr("y", 200)
-//   .text("Y")
-//   .style("font", "60px 'stellar'")
-//   .style("fill", "black")
-
-// for (var t = 0; t < 2000; t++) {
-
-//     d3.selectAll("Ytext")
-//     .style("opacity", 0)
-//     .transition()
-//     .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-//     .duration(200*t) //controls how fast is changes opacity
-//     .style("opacity", 1.0)
-//     .remove()
-
-
-// }// end of for loop
-
-
   var Ytext = canvas.append("text")
     .attr("x", 50)
     .attr("y", 200)
@@ -707,24 +672,21 @@ var text = canvas.append("text")
     };
 
 
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", 300)
+      .text("YOU'VE REACHED THE END OF YOUR VISULISATION!") 
+      .style("font", "20px 'stellar'")
+      .style("fill", "black");
 
-// for (var t = 0; t < 2000; t++) {
-
-//   canvas.append("text")
-//     .attr("x", 50)
-//     .attr("y", 200)
-//     .text("Y")
-//     .style("font", "60px 'stellar'")
-//     .style("fill", "black")
-//     .style("opacity", 0)
-//     .transition()
-//     .delay(function(d,i){ return 100*i; }) //controls how many come on the screen
-//     .duration(200*t) //controls how fast is changes opacity
-//     .style("opacity", 1.0)
-//     .on("end", repeat); 
+      canvas.append("text")
+      .attr("x",30)
+      .attr("y", 330)
+      .text("THANKS FOR COMING ALONG! - IDENTITY 2.0") 
+      .style("font", "20px 'stellar'")
+      .style("fill", "black");
 
 
-// }// end of for loop
 
 
 } //end of the function
