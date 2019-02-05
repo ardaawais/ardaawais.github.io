@@ -683,7 +683,7 @@ var text = canvas.append("text")
         .transition()        // apply a transition
         .duration(1000)      // apply it over 2000 milliseconds
         .style("opacity", 0)
-        .on("end", repeat);  // when the transition finishes start again
+        .each("end", repeat);  // when the transition finishes start again
     };
 
 
